@@ -1,0 +1,116 @@
+#banniere_text_contenue{/*Contenue de la banière*/
+    display: block;
+    box-sizing: border-box;
+    width: 60%; /*Taille occupé sur l'écran*/
+    background-color: #eaa903;
+    padding-left: 130px;
+    padding-right: 130px;
+    color: white;
+}
+#banniere_text_contenue h1{
+    font-weight: bold;
+    font-size: 50px;
+    padding-bottom: 15px;
+}
+#banniere_text_contenue p{
+    color: black;
+    font-size: 19px;
+}
+
+/*Button et ses animations*/
+.button{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.button a{
+    border: solid 2px white;
+    border-radius: 10%;
+    padding: 4px 10px 4px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;/*Curseur*/
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.button a:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button:hover a {
+    padding-right: 30px;
+}
+.button:hover a:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+#banniere_image{
+    background-image: url(../images/photo-IUT.jpg);
+    background-size: 100% 100%;
+    width: 40%;
+}
+
+@media only screen and (max-width: 980px) {
+    #banniere_image{
+        display: none;
+    }
+
+    #banniere_text_contenue{
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: white;
+        padding-left: 100px;
+        padding-right: 100px;
+        color: black;
+    }
+    #banniere_text_contenue h1{
+        font-weight: 900;
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+    #banniere_text_contenue p{
+        font-size: 18px;
+    }
+    
+    /*Button et ses animations*/
+    .button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .button a{
+        color: red;
+        border: solid 2px red;
+        border-radius: 10%;
+        padding: 6px 10px 6px 10px;
+        font-size: 20px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+    }
+    .button a:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    .button:hover a {
+        color: red;
+        padding-right: 30px;
+        border: none;
+        background-color: gray;
+    }
+    .button:hover a:after {
+        opacity: 1;
+        right: 0;
+    }
+    
+}
