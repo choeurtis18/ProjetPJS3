@@ -8,8 +8,12 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Surface de la page-->
 
-            <!--Lien Boostrap-->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+			<!-- font -->
+			<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+			<!--Lien Boostrap-->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="css/style.css"/>
 
         </head>
@@ -179,31 +183,37 @@
  
  
 				<div id="Diplomes" class="row">
- 					<div class="col-md-3 col-lg-3 col-xs-6 col-sm-3 diplome">
+ 					<div class="diplome">
 						<a href="index.html"> 
+							<div class="diplome_top">
 							<div class="icon_DUT icon">
 								<i class="fa fa-file-text-o" aria-hidden="true"></i>
 							</div>
-							<H5> Dut </H5>
+							<h5> Dut </h5>
+							</div>
 							<p> L’IUT délivre un diplôme national de niveau bac+2, le DUT, très reconnu dans le monde socio-professionnel. </p>
+							
 						</a>
 					</div>
 
-					<div  class="col-md-3 col-lg-3 col-xs-6 col-sm-3 diplome">
+					<div class="diplome">
 						<a href="index.html">
+							<div class="diplome_top">
 							<div class="icon_LicencePro icon">
 								<i class="fa fa-files-o" aria-hidden="true"></i>
+							</div>
 							</div>
 							<H5> L pro </H5> 
 							<p> La licence professionnelle, accessible aux étudiants ayant validé 2 années d’études supérieures, permet de se spécialiser et d’obtenir un niveau d’études bac+3. </p>
 	    				</a>
 					</div>
 	    			
-  					<div class="col-md-3 col-lg-3 col-xs-6 col-sm-3 diplome"> 
+  					<div class="diplome"> 
 						<a href="index.html"> 
-						
+							<div class="diplome_top">
 							<div class="icon_DU icon">
 								<i class="fa fa-book" aria-hidden="true"></i>
+							</div>
 							</div>
 							<H5> Du </H5>
 							<p> L’IUT délivre des Diplômes d’Université (DU) dans de nombreux domaines de formation afin de former notamment les adultes en reprise d’études. </p>
@@ -211,11 +221,12 @@
 						</a>
 					</div>
 					
-					<div class="col-md-3 col-lg-3 col-xs-6 col-sm-3 diplome"> 
+					<div class="diplome"> 
 						<a href="index.html"> 
-						
+							<div class="diplome_top">
 							<div class="icon_Licences3 icon">
 								<i class="fa fa-list-alt" aria-hidden="true"></i>
+							</div>
 							</div>
 							<H5> L3 et Master </H5>
 							<p> L’IUT de Paris c’est aussi des licences 3 et un Master en partenariat avec d’autres UFR d’Université de Paris. </p>
@@ -226,36 +237,137 @@
  
 			</div>
 
-
-			
-			<!--Partie Helene-->
-			<div>
-			<div class="container">
-				<div id="footer-widgets" class="clearfix">
-					<div class="footer-widget"><div id="text-2" class="fwidget et_pb_widget widget_text"><h4 class="title">IUT de Paris</h4>			
-						<div class="textwidget"><p><strong>Site Mirabeau<br />
-						</strong>143 avenue de Versailles<br />
-						75016 PARIS<br />
-						Tél. : +33 1 76 53 47 00<br />
-						Fax : +33 1 45 25 70 75</p>
-						<p><strong>Site Pajol<br />
-						</strong>20 rue du Département<strong><br />
-						</strong>75018 Paris</p>
+			<!--Actualité-->
+			<div class="actualite">
+				<h3>Actualités</h3>
+				
+				<div class="actualite_box">
+					<div class="actualite_container">
+						<div class="actualite_card">
+							<!--<div class="actualite_image_box" data-text="#">
+								<img src="#">
+							</div>-->
+							<div class="actualite_content">
+								<div>
+									<a href="index.html">
+									<div class="actualite_titre">
+										<h3>Rentree 2020 : inscription et date à retenir</h3>
+									</div>
+									</a>
+									<p>IUT</p>
+									<p>
+										Inscriptions administratives   Les inscriptions administratives à l'IUT de Paris 
+										auront lieu du 15 juillet au 24 juillet 2020 pour les DUT, Licences professionnelles 
+										et Licences 3 en formation initiale, et à compter du 24 août 2020 pour toutes les autres…
+									</p>
+									<a href="index.html">lire plus</a>
+								</div>
+							</div>
+						</div>
+						<div class="actualite_card">
+							<a href="index.html">
+							<div class="actualite_image_box">
+								<img src="./images/fille-pouce-levé.jpg">
+							</div>
+							</a>
+							<div class="actualite_content">
+								<div>
+									<a href="index.html">
+									<div class="actualite_titre">
+										<h3>Réouverture de la bibliothèque de l’IUT !</h3>
+									</div>
+									</a>
+									<p>IUT</p>
+									<p>
+										La bibliothèque de l'IUT a rouvert ses portes au public le lundi 7 septembre 2020, aux horaires 
+										habituels de 9h à 19h du lundi au vendredi. Néanmoins, étant donné le contexte actuel, des mesures 
+										spécifiques ont été mises en place pour la réouverture : Fermeture…
+									</p>
+									<a href="index.html">lire plus</a>
+								</div>
+							</div>
+						</div>
+						<div class="actualite_card">
+							<!--<div class="actualite_image_box" data-text="#">
+								<img src="#">
+							</div>-->
+							<div class="actualite_content">
+								<div>
+									<a href="index.html">
+									<div class="actualite_titre">
+										<h3>Examens 2020 : les dates à retenir</h3>
+									</div>
+									</a>
+									<p>IUT</p>
+									<p>
+										Voici les dates d'examens à retenir pour l'année 2020 de la filière CCA : Ces dates 
+										sont connues par les étudiant.e.s depuis le 6 mai L3 CCA formation initiale Droit des 
+										sociétés, enseignant.e : CHAMBOREDON Date : 2 juin Horaire : 9h30 - 11h30 Contrôle long 
+										Droit du…
+									</p>
+									<a href="index.html">lire plus</a>
+								</div>
+							</div>
+						</div>					
 					</div>
-				</div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="footer-widget"><div id="text-3" class="fwidget et_pb_widget widget_text"><h4 class="title">Accès directs</h4>			<div class="textwidget"><div class="grid-4-footer footer-links">
-					<p><a href="https://www.iut.parisdescartes.fr/acces-et-contact/">Accès et contacts</a><br />
-					<a href="https://www.iut.parisdescartes.fr/notre-projet/">Le projet de l'IUT</a><br />
-					<a href="/politique-de-confidentialite/">Mentions légales</a></p>
+				</div>
+				<div id="div_btn">
+					<div id="button_actualite" class="button">
+						<a href="index.html">Toutes les actualités</a>
+					</div>
 				</div>
 			</div>
-					</div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="footer-widget"><div id="media_image-2" class="fwidget et_pb_widget widget_media_image"><a href="https://u-paris.fr/"><img width="300" height="88" src="https://www.iut.parisdescartes.fr/wp-content/uploads/sites/3/2019/07/logo-universite-paris-300x88-300x88.png" class="image wp-image-1348  attachment-medium size-medium" alt="" style="max-width: 100%; height: auto;" /></a></div> <!-- end .fwidget --></div> <!-- end .footer-widget -->    </div> <!-- #footer-widgets -->
-			</div>    <!-- .container -->
 			
+			
+			<!--Partie Helene-->
+			<footer>	
+				<div class="container">
+					<div class="row-1">
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="footer-menu">
+								<h4>IUT de Paris</h4>
+		
+								<p id="a">
+									<strong>Site Mirabeau<br /></strong>
+									143 avenue de Versailles<br />
+									75016 PARIS<br />
+									Tél. : +33 1 76 53 47 00<br />
+									Fax : +33 1 45 25 70 75
+								</p>
+								<p>
+									<strong>Site Pajol<br /></strong>
+									20 rue du Département<strong><br />
+									</strong>75018 Paris
+								</p>
+							</div>
+						</div>
+							
 					
-			<div id="footer-bottom">
-				<div class="container clearfix">
-								</div>	<!-- .container -->
-			</div>
-			</div>
+						<div class="col">
+							<div class="footer-menu">
+								<h4>Accès directs</h4>
+								<p>
+									<a href="https://www.iut.parisdescartes.fr/acces-et-contact/">Accès et contacts</a><br />
+									<a href="https://www.iut.parisdescartes.fr/notre-projet/">Le projet de l'IUT</a><br />
+									<a href="/politique-de-confidentialite/">Mentions légales</a>
+								</p>
+							</div>
+						</div>
+						<div class="col-image">
+							<div class="image-res">
+								<a href="https://u-paris.fr/">
+									<img
+										src="images/logo-universite-paris-footer.png" 
+										alt=""
+										height=auto 
+									/>
+								</a>
+							</div>     
+						</div>		
+					</div>
+				</div>
+			</footer>
         </body>
     </html>
