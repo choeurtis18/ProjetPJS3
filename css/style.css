@@ -1,36 +1,40 @@
-
-/*Bannière CSS*/
-#banniere_text_contenue{/*Contenue de la banière*/
-    width: 60%; /*Taille occupé sur l'écran*/
-    background-color: #eaa903;
-    padding: 30px 130px 30px 130px;
-    color: white;
+@charset "UTF-8";
+/*
+font-family: 'Montserrat', sans-serif; //Titre Paragraphe
+font-family: 'Open Sans', sans-serif; //Button
+background-color: #eaa903; = jaune
+background-color: #747d88; = gris pour la police
+background-color: #cf0a2c; = rouge
+*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    transition: 1s;
 }
-#banniere_text_contenue h1{
-    font-weight: bold;
-    font-size: 50px;
+h1, h2, h3, h4, h5{
+    font-family: 'Montserrat', sans-serif;
 }
-#banniere_text_contenue p{
+a{
+    text-decoration: none;
     color: black;
-    font-size: 19px;
 }
 
 /*Button et ses animations*/
 .button{
-    margin-top: 10px;
-    margin-bottom: 30px;
+    padding-bottom: 20px;
 }
 .button a{
+    position: relative;
     text-decoration: none;
     border: solid 2px white;
-    padding: 4px 10px 4px 10px;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 4.8px 16px 4.8px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
     cursor: pointer;/*Curseur*/
     display: inline-block;
-    position: relative;
-    transition: 0.5s;
-    color: white;
+    
 }
 .button a:after {
     content: '\00bb';
@@ -38,7 +42,6 @@
     opacity: 0;
     top: 0;
     right: -20px;
-    transition: 0.5s;
 }
 .button:hover a {
     padding-right: 30px;
@@ -47,13 +50,291 @@
     opacity: 1;
     right: 0;
 }
+/*Fin Button et ses animations*/
+
+
+/*Bannière CSS*/
+#banniere_text_contenue{/*Contenue de la banière*/
+    width: 60%; /*Taille occupé sur l'écran*/
+    background-color: #eaa903;
+    padding: 35px 170px 35px 170px;
+    color: white;
+}
+#banniere_text_contenue h1{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #f7f7f7f7;
+    line-height: 1.3em;
+    padding-bottom: 10px;
+}
+#banniere_text_contenue p{
+    color: #353740;
+    font-size: 20px;
+    line-height: 1.8em;
+    margin-bottom: 15px;
+}
 
 #banniere_image{
     background-image: url(../images/photo-IUT.jpg);
     background-size: 100% 100%;
     width: 40%;
 }
+/*Fin Bannière CSS*/
 
+/*Candidature CSS*/
+#SectionCandidature{
+    margin: 100px 60px 100px 60px;
+    text-align: center;
+}
+#titreCandidature
+{
+    color: #747d88;
+    line-height: 1.9em;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+#phraseCalendrierCandidature
+{
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+#div_btn{
+    text-align: center;
+}
+#button_candidature a{
+    font-size: 18px;
+    border: solid 2px #eaa903;
+    color: #eaa903;
+}
+
+/*Diplome*/
+#SectionDiplomes
+{
+    background-color: #eaa903;
+    color: white;
+    padding: 50px 0 50px 0;
+    
+}
+#titreDiplomes
+{
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin: 0 170px 0 170px;
+    font-weight: 500;
+    font-size: 14px;
+}
+#Diplomes
+{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.diplome {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    text-align: center;
+    padding: 50px;
+    transition: 0.5s;
+    
+}
+.diplome .diplome_top {
+    position: relative;
+    height: 150px;
+    left: 0;
+    width: auto;
+}
+.diplome .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 60px;
+    text-align: center;
+    margin: auto;
+}
+.diplome  h5{
+    font-size: 25px;
+    font-weight: 700;
+}
+.diplome  p{
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 30px;
+}
+.diplome a
+{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+/*Fin Candidature CSS*/
+
+/*Actualite*/
+.actualite{
+    padding: 110px 0px 15px 0px;
+    width: 100%;
+}
+.actualite h3{
+    text-align: center;
+    font-size: 36px;
+    color: #747d88;
+}
+.actualite_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+}
+.actualite_content a{
+    text-decoration: none;
+}
+.actualite_container h3{
+    text-align: left;
+    border-left: solid 4px #cf0a2c;
+    padding: 0px 20px 0px 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #555;
+    font-size: 20px;
+}
+.actualite_container{
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.actualite_container .actualite_card{
+    border: solid 1px #8f918d;
+    max-width: 400px;
+    margin: 10px;
+}
+.actualite_container .actualite_card .actualite_image_box{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    left: 0;
+}
+.actualite_container .actualite_card .actualite_image_box img{
+    max-width: 310px;
+}
+.actualite_container .actualite_card .actualite_content{
+    max-width: 278px;
+    margin: 10px;
+    position: relative;
+}
+.actualite_container .actualite_card a{
+    color: #cf0a2c;
+}
+
+#button_actualite a{
+    border: solid 2px #eaa903;
+    color: #eaa903;
+    font-size: 18px;
+}
+/*Fin Actualite*/
+
+/*Footer*/
+footer .container{
+    background-color: #cf0a2c;
+    margin: auto;
+    position: relative;
+    display: block;
+    width: 80%;
+    max-width: 1080px;
+    padding: 0;
+    text-align: left;
+
+    
+}
+
+footer .row{
+    margin: 0px;
+    padding-bottom: 20px;
+}
+footer .row-1{
+    margin: 0px;
+    padding-top: 6%;
+    
+}
+
+
+footer p{
+    display: inline-block;
+    color:white;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500px;
+    line-height: 23.8px;
+}
+footer strong{
+    font-weight: bold;
+}
+
+footer a{
+    color: white;
+    display: inline-block;
+}
+footer a:hover{
+    color:white;
+    text-decoration: none;
+}
+
+footer h4{
+    color: white;
+    font-size: 19px;
+    font-weight: 500px;
+}
+footer{
+    background-color: #cf0a2c;
+}
+
+.footer-menu {
+    float: left;
+    display: grid;
+
+}
+
+footer .col {
+    width: 29.667%;
+    float: left;
+    margin-right: 5.5%; 
+    margin-bottom: 5.5%;
+    padding: 0;
+    
+
+}
+/* 
+.logo{
+    background-image: "images/logo-universite-paris-footer.png";
+    height: auto; 
+    width: 300px;
+} */
+footer #a{
+    padding-bottom: 1em;
+}
+
+footer .image-res{
+    margin-bottom: 5.5%;
+}
+
+/*Fin Footer*/
+
+
+/*Page réduite*/
 @media only screen and (max-width: 980px) {
     #banniere_image{
         display: none;
@@ -99,60 +380,4 @@
     }
     
 }
-/*Fin Bannière CSS*/
-
-/*Candidature CSS*/
-#SectionCandidature{
-    margin: 100px 50px 100px 50px;
-    text-align: center;
-}
-#titreCandidature
-{
-    text-align: center;
-    margin-bottom: 30px;
-}
-#phraseCalendrierCandidature
-{
-    text-align: center;
-    font-size: 25px;
-    margin-bottom: 30px;
-}
-#div_btn{
-    text-align: center;
-}
-#button_candidature a{
-    border: solid 2px #eaa903;
-    color: #eaa903;
-}
-
-
-#SectionDiplomes
-{
-    background-color: #eaa903;
-    color: white;
-    padding: 100px 200px 100px 200px;
-}
-#titreDiplomes
-{
-	text-align: center;
-}
-
-#Diplomes
-{
-    align-items: center;
-	display: flex;
-    width: 100%;
-}
-
-.diplome {
-    padding: 70px 50px 70px 50px;
-}
-.diplome a
-{
-    color: white;
-    text-align: center;
-    text-decoration: none;
-}
-
-
-/*Fin Candidature CSS*/
+/*Fin Page réduite*/
