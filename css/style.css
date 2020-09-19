@@ -45,6 +45,7 @@ a{
 }
 .button:hover a {
     padding-right: 30px;
+    transition: 0.5s;
 }
 .button:hover a:after {
     opacity: 1;
@@ -52,6 +53,122 @@ a{
 }
 /*Fin Button et ses animations*/
 
+/*Menu*/
+#top-menu{
+	background-color: #cf0a2c;
+	line-height: 1em;
+}
+#top-menu .container{
+	padding-top: 0.5em;
+	font-weight: 600;
+}
+#menu-social{
+	float: right;
+}
+#icone-reseau li{
+	display: inline;
+	list-style: none;
+	padding-right: 1em;
+}
+.fa, .lien{
+	color: white;
+}
+.lien{
+	font-size: 13px;
+}
+.fa:hover, .lien:hover{
+	color: white;
+	text-decoration: none;
+	opacity: 0.8;
+}
+#logo{
+	float: none;
+	width: 29%;
+}
+#logo img{
+	width: 45%;
+	height: 45%;
+	padding-top: 25px;
+}
+#barre{
+	height: 600px;
+}
+#menu{
+	float: right;
+	padding-top: 30px;
+	padding-right: 50px;
+	width: 70%;
+}
+#menu, #logo{
+	text-align: center;
+}
+#menu li{
+	padding-right: 14px;
+	font-size: 16px;
+}
+#menu a{
+	color: #354425!important;
+}
+#covid{
+	background-color: #eaa903;
+}
+#menu a:hover{
+	opacity: 0.8;
+}
+.dropdown-menu{
+	display: none;
+	border-top: 3px #cf0a2c solid;
+	border-radius: 0;
+}
+.dropdown:hover .dropdown-menu{
+	display: block;
+}
+#search{
+	background-color: white;
+	border: none;
+}
+#search:hover{
+	color: #cf0a2c!important;
+}
+#menu form{
+	display: none;
+}
+#formulaire:target{
+	display: block;
+}
+#mobile li{
+	list-style: none;
+	text-align: left;
+}
+.mobile-titre{
+	background-color: grey;
+}
+#mobile-menu{
+	display: none;
+	border-top: 3px #cf0a2c solid;
+}
+#mobile-icone2{
+	display: none;
+}
+#mobile:target #mobile-menu{
+	display: block;
+}
+#mobile:target #mobile-icone{
+	display: none;
+}
+#mobile:target #mobile-icone2{
+	display: block;
+}
+#mobile-menu:target{
+	display: none;
+}
+
+@media screen and (max-width: 980px) {
+	#top-menu{
+		display: none;
+	}
+}
+/*Fin Menu*/
 
 /*Bannière CSS*/
 #banniere_text_contenue{/*Contenue de la banière*/
@@ -79,6 +196,7 @@ a{
     background-image: url(../images/photo-IUT.jpg);
     background-size: 100% 100%;
     width: 40%;
+    overflow: hidden;
 }
 /*Fin Bannière CSS*/
 
@@ -107,7 +225,7 @@ a{
 #div_btn{
     text-align: center;
 }
-#button_candidature a{
+.button_jaune a{
     font-size: 18px;
     border: solid 2px #eaa903;
     color: #eaa903;
@@ -118,60 +236,45 @@ a{
 {
     background-color: #eaa903;
     color: white;
-    padding: 50px 0 50px 0;
-    
+    padding: 50px 0 80px 0;
 }
-#titreDiplomes
-{
+#Diplome_Content{
+    max-width: 1500px;
+    margin: 0 auto;
     text-align: center;
+    padding: 30px;
+}
+#Diplome_Content h1
+{
+    margin: 0 auto;
     padding: 20px 0 0 0;
-    margin: 0 170px 0 170px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 36px;
 }
-#Diplomes
-{
+#Diplomes{
+    display: flex;
+    align-items: center;
+}
+.diplome{
+    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
 }
-
-.diplome {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-    text-align: center;
-    padding: 50px;
-    transition: 0.5s;
-    
-}
-.diplome .diplome_top {
-    position: relative;
-    height: 150px;
-    left: 0;
-    width: auto;
-}
-.diplome .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
+.diplome .icon{
     font-size: 60px;
-    text-align: center;
-    margin: auto;
+    margin: 16px 0;
 }
-.diplome  h5{
-    font-size: 25px;
+.diplome > *{
+    flex: 1 1 100%;
+}
+.diplome h5{
+    font-size: 20px;
     font-weight: 700;
 }
-.diplome  p{
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 30px;
+.diplome p{
+    font-size: 16px;
 }
 .diplome a
 {
@@ -186,7 +289,7 @@ a{
     padding: 110px 0px 15px 0px;
     width: 100%;
 }
-.actualite h3{
+.actualite h1{
     text-align: center;
     font-size: 36px;
     color: #747d88;
@@ -214,7 +317,6 @@ a{
     width: 1200px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     margin: 20px;
 }
 .actualite_container .actualite_card{
@@ -239,13 +341,63 @@ a{
 .actualite_container .actualite_card a{
     color: #cf0a2c;
 }
-
-#button_actualite a{
+.button_jaune a{
     border: solid 2px #eaa903;
     color: #eaa903;
     font-size: 18px;
 }
+.button_jaune:hover a{
+    transition: 0.5s;
+}
 /*Fin Actualite*/
+
+
+ /* pARTIE IUT EN CHIFFRE */
+ 
+ #iutEnChiffre {
+    background-color: #eaa903;
+    color: white;
+    padding: 50px 0 50px 0;
+    
+}
+
+#titreIutEnChiffre {
+    text-align: center;
+    padding: 20px 0 20px 0;
+    margin: 0 170px 0 170px;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+}
+
+#Chiffre{
+    text-align: center;
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+.BoxiutEnChiffre{
+    width: 220px;
+    height: 120px;
+    margin: 0px 10px;
+    text-transform: uppercase;
+}
+.nbr{
+    font-weight: 700;
+    color:  #ffffff;
+    text-align: center;
+    font-size: 60px;
+
+}
+
+.title{
+    font-weight: bold;
+    color:  #353740;
+    text-align: center;
+    font-size: 18px;
+}
+/*Fin IUT en chiffre*/
 
 /*Footer*/
 footer .container{
@@ -336,10 +488,44 @@ footer .image-res{
 
 /*Page réduite*/
 @media only screen and (max-width: 980px) {
+    /*background-color: #f2f2f2; gris clair button hover*/
+    
+    article{
+        background-color: #ffffff !important;
+    }
+    h1{ 
+        font-size: 14px;
+        color: #333;
+    }
+    
+    /*Button et ses animations*/
+    .button a{
+        color: #cf0a2c;
+        border: solid 2px #cf0a2c;
+        font-size: 18px;
+        font-weight: 0;
+        border-radius: 0%;
+    }
+    .button:hover a {
+        color: #cf0a2c;
+        padding-right: 30px;
+        border: none;
+        background-color: #f2f2f2;
+        transition: 0.5s;
+    }
+    .button_jaune a{
+        border-radius: 0%;
+        color: #cf0a2c;
+        border: solid 2px #cf0a2c;
+    }
+    .button:hover a {
+        color: #cf0a2c;
+    }
     #banniere_image{
         display: none;
     }
 
+    /*Bannière CSS*/
     #banniere_text_contenue{
         display: block;
         box-sizing: border-box;
@@ -350,34 +536,57 @@ footer .image-res{
         color: black;
     }
     #banniere_text_contenue h1{
-        font-weight: 900;
+        font-weight: bold;
         font-size: 30px;
         padding-bottom: 15px;
+        color: #333;
+        margin: 0%;
+        padding: 0 0 10px 0;
     }
     #banniere_text_contenue p{
-        font-size: 18px;
+        font-size: 14px;
+        margin: 0%;
+        padding: 0%;
     }
-    
-    /*Button et ses animations*/
-    .button{
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .button a{
-        color: red;
-        border: solid 2px red;
-        padding: 6px 10px 6px 10px;
+    /*Fin Bannière CSS*/
+
+    /*Candidature CSS*/
+    #phraseCalendrierCandidature{
+        margin: 0 10px 0 10px;
         font-size: 20px;
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
+        text-align: left;
+        font-weight: bold;
     }
-    .button:hover a {
-        color: red;
-        padding-right: 30px;
-        border: none;
-        background-color: gray;
+    /*Fin Candidature CSS*/
+
+    /*Diplome CSS*/
+    #SectionDiplomes{
+        margin: 0%;
+        padding: 0%;
     }
-    
+    #Diplome_Content h1{
+        font-size: 14px;
+        color: #333;
+    }
+    .diplome h5{
+        color: #333;
+    }
+    .diplome p{
+        color: #333;
+    }
+    .diplome .icon{
+        color: #cf0a2c;
+    }
+    /*Fin Diplome CSS*/
+
+    /*Actualité CSS*/
+
+    /*Fin Actualité CSS*/
+
+    /*IUT en chiffre CSS*/
+    .BoxiutEnChiffre p{
+        color: #333;
+    }
+    /*Fin IUT en chiffre CSS*/
 }
 /*Fin Page réduite*/
