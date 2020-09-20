@@ -174,29 +174,31 @@ a{
 #banniere_text_contenue{/*Contenue de la banière*/
     width: 60%; /*Taille occupé sur l'écran*/
     background-color: #eaa903;
-    padding: 35px 170px 35px 170px;
+    padding: 0px 155px 30px 155px;
     color: white;
 }
 #banniere_text_contenue h1{
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 55px;
     color: #f7f7f7f7;
     line-height: 1.3em;
     padding-bottom: 10px;
 }
 #banniere_text_contenue p{
     color: #353740;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.8em;
     margin-bottom: 15px;
+    font-weight: 500;
 }
 
 #banniere_image{
     background-image: url(../images/photo-IUT.jpg);
-    background-size: 100% 100%;
     width: 40%;
-    overflow: hidden;
+    background-size: cover;
+    background-position: 50% 50%;
+    
 }
 /*Fin Bannière CSS*/
 
