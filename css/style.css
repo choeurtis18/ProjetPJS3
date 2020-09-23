@@ -7,9 +7,9 @@ background-color: #747d88; = gris pour la police
 background-color: #cf0a2c; = rouge
 */
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family:"Open Sans", Arial, sans-serif;
     width: 100%;
-    transition: 1s;
+    transition: 0.8s;
 }
 h1, h2, h3, h4, h5{
     font-family: 'Montserrat', sans-serif;
@@ -28,6 +28,7 @@ a{
     padding-bottom: 20px;
 }
 .button a{
+    font-family:"Open Sans", Arial, sans-serif;
     position: relative;
     text-decoration: none;
     border: solid 2px white;
@@ -176,21 +177,22 @@ a{
 #banniere_text_contenue{/*Contenue de la banière*/
     width: 60%; /*Taille occupé sur l'écran*/
     background-color: #eaa903;
-    padding: 0px 155px 30px 155px;
+    padding: 10px 135px 30px 135px;
     color: white;
 }
 #banniere_text_contenue h1{
+    font-family:'Montserrat', sans-serif;
+    font-size:60px;
     font-weight:700;
     text-transform: uppercase;
-    font-size: 60px;
     color: #f7f7f7f7;
     line-height:78px;
     padding-bottom: 10px;
 }
 #banniere_text_contenue p{
+    font-family:'Montserrat', sans-serif;
     color: #353740;
-    font-size: 20px;
-    line-height: 36px;
+    font-size:20px;
     margin-bottom: 10px;
     font-weight: 500;
 }
@@ -209,13 +211,13 @@ a{
     margin: 100px 60px 100px 60px;
     text-align: center;
 }
-#titreCandidature
-{
+#titreCandidature h1{
+    font-family:Montserrat, sans-serif;
     color: #747d88;
-    line-height: 1.9em;
     text-align: center;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight:500;
+    line-height:68.4px;
     margin-bottom: 30px;
 }
 #phraseCalendrierCandidature
@@ -251,6 +253,7 @@ a{
 }
 #Diplome_Content h1
 {
+    font-family:'Montserrat', sans-serif;
     margin: 0 auto;
     padding: 20px 0 0 0;
     font-weight: 500;
@@ -266,11 +269,6 @@ a{
     flex: 1;
     margin: 20px;
     padding: 20px;
-}
-.diplome .icon{
-    font-size: 60px;
-    margin: 16px 0;
-    
 }
 .diplome h5{
     font-family:'Montserrat', sans-serif;
@@ -544,8 +542,8 @@ footer .image-res{
     .button a{
         color: #cf0a2c;
         border: solid 2px #cf0a2c;
-        font-size: 18px;
-        font-weight: 0;
+        font-size: 20px;
+        font-weight: 500;
         border-radius: 0%;
     }
     .button:hover a {
@@ -580,8 +578,9 @@ footer .image-res{
     #banniere_text_contenue h1{
         font-weight: bold;
         font-size: 30px;
+        font-weight:900;
         padding-bottom: 15px;
-        color: #333;
+        color: #555;
         margin: 0%;
         padding: 0 0 10px 0;
     }
@@ -593,11 +592,15 @@ footer .image-res{
     /*Fin Bannière CSS*/
 
     /*Candidature CSS*/
+    #titreCandidature h1{
+        font-size:14px;
+        color: #667;
+    }
     #phraseCalendrierCandidature{
         margin: 0 10px 0 10px;
-        font-size: 20px;
+        font-size: 22px;
         text-align: left;
-        font-weight: bold;
+        font-weight: 700;
     }
     /*Fin Candidature CSS*/
 
@@ -611,34 +614,43 @@ footer .image-res{
         color: #333;
     }
     .diplome h5{
+        font-size:18px;
+        font-weight:700;
         color: #333;
     }
     .diplome p{
+        font-size:14px;
+        font-weight:500;
         color: #333;
     }
-    .diplome .icon{
+    .diplome .affichage-logo{
         color: #cf0a2c;
     }
     /*Fin Diplome CSS*/
 
     /*Actualité CSS*/
-    .actualite_card{
-        flex: 1;
+    .actualite h1{
+        font-size: 14px;
+        color: #333;
     }
-    .RentreeBox{
-        flex: 2;
-    }
-    .ReouvertureBox{
-        flex: 1;
-    }
-    .ExamensBox{
-        flex: 1;
+    .actualite_content a{
+        font-size:14x;
+        font-weight:500;
     }
     /*Fin Actualité CSS*/
 
     /*IUT en chiffre CSS*/
+    .BoxiutEnChiffre h3{
+        font-size:18px;
+        font-weight:700;
+        color: #555;
+        font-family:"Open Sans", Arial, sans-serif;
+    }
     .BoxiutEnChiffre p{
-        color: #333;
+        font-size:72px;
+        font-weight:500;
+        font-family:"Open Sans", Arial, sans-serif;
+        color: #667;
     }
     /*Fin IUT en chiffre CSS*/
 }
