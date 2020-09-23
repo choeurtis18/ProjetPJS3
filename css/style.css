@@ -15,8 +15,12 @@ h1, h2, h3, h4, h5{
     font-family: 'Montserrat', sans-serif;
 }
 a{
+    font-family:"Open Sans", Arial, sans-serif;
     text-decoration: none;
     color: black;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing:2px;
 }
 
 /*Button et ses animations*/
@@ -29,9 +33,7 @@ a{
     border: solid 2px white;
     padding: 4.8px 16px 4.8px 16px;
     border-radius: 12px;
-    font-size: 16px;
     color: white;
-    font-weight: 700;
     cursor: pointer;/*Curseur*/
     display: inline-block;
     
@@ -178,18 +180,18 @@ a{
     color: white;
 }
 #banniere_text_contenue h1{
-    font-weight: 600;
+    font-weight:700;
     text-transform: uppercase;
-    font-size: 55px;
+    font-size: 60px;
     color: #f7f7f7f7;
-    line-height: 1.3em;
+    line-height:78px;
     padding-bottom: 10px;
 }
 #banniere_text_contenue p{
     color: #353740;
-    font-size: 18px;
-    line-height: 1.8em;
-    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 10px;
     font-weight: 500;
 }
 
@@ -218,17 +220,18 @@ a{
 }
 #phraseCalendrierCandidature
 {
-    color: #333;
-    font-weight: 600;
-    text-align: center;
-    font-size: 25px;
+    color: #555;
+    font-size: 22px;
+    font-weight: 700;
+    line-height:30.8px;
+    text-align: left;
     padding-bottom: 30px;
+    text-size-adjust:100%;
 }
 #div_btn{
     text-align: center;
 }
 .button_jaune a{
-    font-size: 18px;
     border: solid 2px #eaa903;
     color: #eaa903;
 }
@@ -259,24 +262,28 @@ a{
 }
 .diplome{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: row wrap;
     flex: 1;
-    margin: 20px;
-    padding: 20px;
+    margin: 15px;
+    padding: 15px;
+}
+.diplome > *{
+    flex: 1 100%;
 }
 .diplome .icon{
     font-size: 60px;
     margin: 16px 0;
 }
-.diplome > *{
-    flex: 1 1 100%;
-}
 .diplome h5{
-    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+    font-size:22px;
     font-weight: 700;
 }
 .diplome p{
-    font-size: 16px;
+    font-family:'Montserrat', sans-serif;
+    font-size:16px;
+    font-weight:500;
+    line-height:28.8px;
 }
 .diplome a
 {
@@ -290,17 +297,18 @@ a{
 .actualite{
     padding: 110px 0px 15px 0px;
     width: 100%;
+    background: #FFF;
 }
 .actualite h1{
+    font-family:Montserrat, sans-serif;
     text-align: center;
     font-size: 36px;
     color: #747d88;
 }
-.actualite_box{
-    display: flex;
+.actualite_container{
     justify-content: center;
-    align-items: center;
-    background: #FFF;
+    display: flex;
+    flex-wrap: wrap;
 }
 .actualite_content a{
     text-decoration: none;
@@ -312,33 +320,30 @@ a{
     margin-bottom: 20px;
     font-weight: 700;
     color: #555;
-    font-size: 20px;
-}
-.actualite_container{
-    position: relative;
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    font-size: 18px;
+    font-family:"Open Sans", Arial, sans-serif;
 }
 .actualite_container .actualite_card{
+    text-size-adjust:100%;
+    display: block;
+    max-width: 310px;
     border: solid 1px #8f918d;
-    max-width: 400px;
-    margin: 10px;
+    margin: 30px;
 }
 .actualite_container .actualite_card .actualite_image_box{
-    position: relative;
-    width: 100%;
-    height: 200px;
-    left: 0;
+    width: 310px;
 }
 .actualite_container .actualite_card .actualite_image_box img{
-    max-width: 310px;
+    width: 100%;
+    height: 100%;
 }
 .actualite_container .actualite_card .actualite_content{
+    color: #667;
     max-width: 278px;
     margin: 10px;
     position: relative;
+    text-align: left;
+    font-size: 14px;
 }
 .actualite_container .actualite_card a{
     color: #cf0a2c;
@@ -350,6 +355,18 @@ a{
 }
 .button_jaune:hover a{
     transition: 0.5s;
+}
+@media all and (max-width: 770px) {
+    
+    .RentreeBox{
+        flex: 1;
+    }
+    .ReouvertureBox{
+        flex: 1;
+    }
+    .ExamensBox{
+        flex: 1;
+    }
 }
 /*Fin Actualite*/
 
@@ -489,7 +506,7 @@ footer .image-res{
 
 
 /*Page réduite*/
-@media only screen and (max-width: 980px) {
+@media all and (max-width: 980px) {
     /*background-color: #f2f2f2; gris clair button hover*/
     
     article{
@@ -582,7 +599,18 @@ footer .image-res{
     /*Fin Diplome CSS*/
 
     /*Actualité CSS*/
-
+    .actualite_card{
+        flex: 1;
+    }
+    .RentreeBox{
+        flex: 2;
+    }
+    .ReouvertureBox{
+        flex: 1;
+    }
+    .ExamensBox{
+        flex: 1;
+    }
     /*Fin Actualité CSS*/
 
     /*IUT en chiffre CSS*/
