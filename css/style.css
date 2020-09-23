@@ -263,10 +263,12 @@ a{
     flex: 1;
     margin: 20px;
     padding: 20px;
+    
 }
 .diplome .icon{
     font-size: 60px;
     margin: 16px 0;
+    
 }
 .diplome > *{
     flex: 1 1 100%;
@@ -284,6 +286,18 @@ a{
     text-align: center;
     text-decoration: none;
 }
+
+@font-face {
+    font-family: "ETmodules";
+    src: url("font/modules.eot") format("embedded-opentype"), url("font/modules.ttf") format("truetype"), url("font/modules.woff") format("woff"), url("font/modules.svg") format("svg");
+    font-style: normal;
+    font-weight: normal;
+  }
+  .affichage-logo{
+    font-family: "ETmodules";
+    font-size: 60px;
+    color: #ffffff;
+  }
 /*Fin Candidature CSS*/
 
 /*Actualite*/
