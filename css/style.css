@@ -1,4 +1,4 @@
-@charset "UTF-8";   
+@charset "UTF-8";
 /*
 font-family: 'Montserrat', sans-serif; //Titre Paragraphe
 font-family: 'Open Sans', sans-serif; //Button
@@ -7,13 +7,15 @@ background-color: #747d88; = gris pour la police
 background-color: #cf0a2c; = rouge
 */
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Arial', sans-serif;
     width: 100%;
     transition: 1s;
 }
 h1, h2, h3, h4, h5{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 10px;
 }
+
 a{
     text-decoration: none;
     color: black;
@@ -174,7 +176,7 @@ a{
 #banniere_text_contenue{/*Contenue de la banière*/
     width: 60%; /*Taille occupé sur l'écran*/
     background-color: #eaa903;
-    padding: 0px 155px 30px 155px;
+    padding: 2% 8%;
     color: white;
 }
 #banniere_text_contenue h1{
@@ -197,7 +199,7 @@ a{
     background-image: url(../images/photo-IUT.jpg);
     width: 40%;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 40% 40%;
     
 }
 /*Fin Bannière CSS*/
@@ -238,31 +240,35 @@ a{
 {
     background-color: #eaa903;
     color: white;
-    padding: 50px 0 80px 0;
+    padding: 60px 0 60px 0;
 }
 #Diplome_Content{
-    max-width: 1500px;
-    margin: 0 auto;
+    max-width: 80%;
+    margin:auto;
     text-align: center;
-    padding: 30px;
+    padding:0;
+
+
 }
 #Diplome_Content h1
 {
     margin: 0 auto;
-    padding: 20px 0 0 0;
+    padding: 2% 0 2% 0;
     font-weight: 500;
     font-size: 36px;
 }
 #Diplomes{
     display: flex;
-    align-items: center;
+    padding:25px 0 25px 0;
+    margin: auto;
 }
 .diplome{
     display: flex;
     flex-wrap: wrap;
     flex: 1;
-    margin: 20px;
-    padding: 20px;
+    margin: 0 3% 0 0;
+    padding: 30px;
+    
     
 }
 .diplome .icon{
@@ -278,14 +284,21 @@ a{
     font-weight: 700;
 }
 .diplome p{
-    font-size: 16px;
+    font-size:100%;
+    line-height: 1.8em;
 }
+
 .diplome a
 {
     color: white;
     text-align: center;
     text-decoration: none;
 }
+/* @media all and (max-width:980px){
+    .affichage-logo{
+        color: #cf0a2c !important;
+    }
+} */
 
 @font-face {
     font-family: "ETmodules";
@@ -334,11 +347,13 @@ a{
     display: flex;
     justify-content: space-between;
     margin: 20px;
+    align-items: flex-start;
 }
 .actualite_container .actualite_card{
-    border: solid 1px #8f918d;
+    border: solid 1px #d8d8d8;
     max-width: 400px;
     margin: 10px;
+    
 }
 .actualite_container .actualite_card .actualite_image_box{
     position: relative;
@@ -388,10 +403,11 @@ a{
 
 #Chiffre{
     text-align: center;
-    width: 90%;
-    margin: 50px auto;
+    margin: auto;
     display: flex;
     justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 .BoxiutEnChiffre{
     width: 220px;
@@ -516,7 +532,7 @@ footer .image-res{
 
 
 /*Page réduite*/
-@media only screen and (max-width: 980px) {
+@media only all and (max-width: 980px) {
     /*background-color: #f2f2f2; gris clair button hover*/
     
     article{
@@ -603,8 +619,8 @@ footer .image-res{
     .diplome p{
         color: #333;
     }
-    .diplome .icon{
-        color: #cf0a2c;
+    .affichage-logo{
+        color: #cf0a2c !important;
     }
     /*Fin Diplome CSS*/
 
