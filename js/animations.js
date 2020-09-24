@@ -1,7 +1,8 @@
 let observer = new IntersectionObserver(function (entrer) {
     entrer.forEach(function (observable) {//selectionne les éléments de entrer
-        if(observable.intersectionRatio > 0.5){//si 50% de l'élément est "passer" 
+        if(observable.intersectionRatio > 0.2){//si 50% de l'élément est "passer" 
             observable.target.classList.add("visible") //le rendre visible
+            observer.unobserve(observable.target)
         }
     })
 
