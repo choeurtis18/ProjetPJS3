@@ -6,20 +6,31 @@ background-color: #eaa903; = jaune
 background-color: #747d88; = gris pour la police
 background-color: #cf0a2c; = rouge
 */
+/*Propiétés général de la page*/
 body{
     font-family: 'Arial', sans-serif;
     width: 100%;
     transition: 1s;
+    display: none;
 }
 h1, h2, h3, h4, h5{
     font-family: 'Arial', sans-serif;
     padding-bottom: 10px;
 }
-
 a{
     text-decoration: none;
     color: black;
 }
+
+/*Pour les scrolls annimations*/
+article{
+    opacity: 0;
+}
+article .visible{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
 
 /*Button et ses animations*/
 .button{
@@ -174,7 +185,7 @@ a{
 
 /*Bannière CSS*/
 #banniere_text_contenue{/*Contenue de la banière*/
-    width: 60%; /*Taille occupé sur l'écran*/
+    width: 60%; /*Taille occupé sur l'écran par le contenue*/
     background-color: #eaa903;
     padding: 2% 8%;
     color: white;
@@ -197,7 +208,7 @@ a{
 
 #banniere_image{
     background-image: url(../images/photo-IUT.jpg);
-    width: 40%;
+    width: 40%;/*Taille occupé sur l'écran par le'image*/
     background-size: cover;
     background-position: 40% 40%;
     
@@ -247,8 +258,6 @@ a{
     margin:auto;
     text-align: center;
     padding:0;
-
-
 }
 #Diplome_Content h1
 {
@@ -287,19 +296,13 @@ a{
     font-size:100%;
     line-height: 1.8em;
 }
-
 .diplome a
 {
     color: white;
     text-align: center;
     text-decoration: none;
 }
-/* @media all and (max-width:980px){
-    .affichage-logo{
-        color: #cf0a2c !important;
-    }
-} */
-
+/*Font pour les icônes*/
 @font-face {
     font-family: "ETmodules";
     src: url("font/modules.eot") format("embedded-opentype"), url("font/modules.ttf") format("truetype"), url("font/modules.woff") format("woff"), url("font/modules.svg") format("svg");
@@ -383,7 +386,7 @@ a{
 /*Fin Actualite*/
 
 
- /* pARTIE IUT EN CHIFFRE */
+ /* PARTIE IUT EN CHIFFRE */
  
  #iutEnChiffre {
     background-color: #eaa903;
@@ -391,7 +394,6 @@ a{
     padding: 50px 0 50px 0;
     
 }
-
 #titreIutEnChiffre {
     text-align: center;
     padding: 20px 0 20px 0;
@@ -400,7 +402,6 @@ a{
     font-size: 14px;
     color: white;
 }
-
 #Chiffre{
     text-align: center;
     margin: auto;
@@ -440,9 +441,7 @@ footer .container{
     width: 80%;
     max-width: 1080px;
     padding: 0;
-    text-align: left;
-
-    
+    text-align: left; 
 }
 
 footer .row{
@@ -454,8 +453,6 @@ footer .row-1{
     padding-top: 6%;
     
 }
-
-
 footer p{
     display: inline-block;
     color:white;
@@ -501,12 +498,6 @@ footer .col {
     
 
 }
-/* 
-.logo{
-    background-image: "images/logo-universite-paris-footer.png";
-    height: auto; 
-    width: 300px;
-} */
 footer #a{
     padding-bottom: 1em;
 }
