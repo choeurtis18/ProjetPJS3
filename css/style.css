@@ -9,7 +9,7 @@ background-color: #cf0a2c; = rouge
 body{
     font-family: 'Arial', sans-serif;
     width: 100%;
-    transition: 1s;
+    transition: 0.8s;
 }
 h1, h2, h3, h4, h5{
     font-family: 'Arial', sans-serif;
@@ -17,8 +17,12 @@ h1, h2, h3, h4, h5{
 }
 
 a{
+    font-family:"Open Sans", Arial, sans-serif;
     text-decoration: none;
     color: black;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing:2px;
 }
 
 /*Button et ses animations*/
@@ -26,14 +30,13 @@ a{
     padding-bottom: 20px;
 }
 .button a{
+    font-family:"Open Sans", Arial, sans-serif;
     position: relative;
     text-decoration: none;
     border: solid 2px white;
     padding: 4.8px 16px 4.8px 16px;
     border-radius: 12px;
-    font-size: 16px;
     color: white;
-    font-weight: 700;
     cursor: pointer;/*Curseur*/
     display: inline-block;
     
@@ -180,18 +183,19 @@ a{
     color: white;
 }
 #banniere_text_contenue h1{
-    font-weight: 600;
+    font-family:'Montserrat', sans-serif;
+    font-size:60px;
+    font-weight:700;
     text-transform: uppercase;
-    font-size: 55px;
     color: #f7f7f7f7;
-    line-height: 1.3em;
+    line-height:78px;
     padding-bottom: 10px;
 }
 #banniere_text_contenue p{
+    font-family:'Montserrat', sans-serif;
     color: #353740;
-    font-size: 18px;
-    line-height: 1.8em;
-    margin-bottom: 15px;
+    font-size:20px;
+    margin-bottom: 10px;
     font-weight: 500;
 }
 
@@ -209,28 +213,29 @@ a{
     margin: 100px 60px 100px 60px;
     text-align: center;
 }
-#titreCandidature
-{
+#titreCandidature h1{
+    font-family:Montserrat, sans-serif;
     color: #747d88;
-    line-height: 1.9em;
     text-align: center;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight:500;
+    line-height:68.4px;
     margin-bottom: 30px;
 }
 #phraseCalendrierCandidature
 {
-    color: #333;
-    font-weight: 600;
-    text-align: center;
-    font-size: 25px;
+    color: #555;
+    font-size: 22px;
+    font-weight: 700;
+    line-height:30.8px;
+    text-align: left;
     padding-bottom: 30px;
+    text-size-adjust:100%;
 }
 #div_btn{
     text-align: center;
 }
 .button_jaune a{
-    font-size: 18px;
     border: solid 2px #eaa903;
     color: #eaa903;
 }
@@ -252,6 +257,7 @@ a{
 }
 #Diplome_Content h1
 {
+    font-family:'Montserrat', sans-serif;
     margin: 0 auto;
     padding: 2% 0 2% 0;
     font-weight: 500;
@@ -264,7 +270,7 @@ a{
 }
 .diplome{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: row wrap;
     flex: 1;
     margin: 0 3% 0 0;
     padding: 30px;
@@ -274,13 +280,13 @@ a{
 .diplome .icon{
     font-size: 60px;
     margin: 16px 0;
-    
 }
 .diplome > *{
-    flex: 1 1 100%;
+    flex: 1 100%;
 }
 .diplome h5{
-    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+    font-size:22px;
     font-weight: 700;
 }
 .diplome p{
@@ -317,17 +323,18 @@ a{
 .actualite{
     padding: 110px 0px 15px 0px;
     width: 100%;
+    background: #FFF;
 }
 .actualite h1{
+    font-family:Montserrat, sans-serif;
     text-align: center;
     font-size: 36px;
     color: #747d88;
 }
-.actualite_box{
-    display: flex;
+.actualite_container{
     justify-content: center;
-    align-items: center;
-    background: #FFF;
+    display: flex;
+    flex-wrap: wrap;
 }
 .actualite_content a{
     text-decoration: none;
@@ -339,6 +346,7 @@ a{
     margin-bottom: 20px;
     font-weight: 700;
     color: #555;
+
     font-size: 20px;
 }
 .actualite_container{
@@ -356,18 +364,19 @@ a{
     
 }
 .actualite_container .actualite_card .actualite_image_box{
-    position: relative;
-    width: 100%;
-    height: 200px;
-    left: 0;
+    width: 310px;
 }
 .actualite_container .actualite_card .actualite_image_box img{
-    max-width: 310px;
+    width: 100%;
+    height: 100%;
 }
 .actualite_container .actualite_card .actualite_content{
+    color: #667;
     max-width: 278px;
     margin: 10px;
     position: relative;
+    text-align: left;
+    font-size: 14px;
 }
 .actualite_container .actualite_card a{
     color: #cf0a2c;
@@ -379,6 +388,18 @@ a{
 }
 .button_jaune:hover a{
     transition: 0.5s;
+}
+@media all and (max-width: 770px) {
+    
+    .RentreeBox{
+        flex: 1;
+    }
+    .ReouvertureBox{
+        flex: 1;
+    }
+    .ExamensBox{
+        flex: 1;
+    }
 }
 /*Fin Actualite*/
 
@@ -532,7 +553,9 @@ footer .image-res{
 
 
 /*Page réduite*/
-@media only all and (max-width: 980px) {
+
+@media all and (max-width: 980px) {
+
     /*background-color: #f2f2f2; gris clair button hover*/
     
     article{
@@ -547,8 +570,8 @@ footer .image-res{
     .button a{
         color: #cf0a2c;
         border: solid 2px #cf0a2c;
-        font-size: 18px;
-        font-weight: 0;
+        font-size: 20px;
+        font-weight: 500;
         border-radius: 0%;
     }
     .button:hover a {
@@ -583,8 +606,9 @@ footer .image-res{
     #banniere_text_contenue h1{
         font-weight: bold;
         font-size: 30px;
+        font-weight:900;
         padding-bottom: 15px;
-        color: #333;
+        color: #555;
         margin: 0%;
         padding: 0 0 10px 0;
     }
@@ -596,11 +620,15 @@ footer .image-res{
     /*Fin Bannière CSS*/
 
     /*Candidature CSS*/
+    #titreCandidature h1{
+        font-size:14px;
+        color: #667;
+    }
     #phraseCalendrierCandidature{
         margin: 0 10px 0 10px;
-        font-size: 20px;
+        font-size: 22px;
         text-align: left;
-        font-weight: bold;
+        font-weight: 700;
     }
     /*Fin Candidature CSS*/
 
@@ -614,24 +642,45 @@ footer .image-res{
         color: #333;
     }
     .diplome h5{
+        font-size:18px;
+        font-weight:700;
         color: #333;
     }
     .diplome p{
+        font-size:14px;
+        font-weight:500;
         color: #333;
     }
-    .affichage-logo{
-        color: #cf0a2c !important;
+
+    .diplome .affichage-logo{
+        color: #cf0a2c;
     }
     /*Fin Diplome CSS*/
 
     /*Actualité CSS*/
-
+    .actualite h1{
+        font-size: 14px;
+        color: #333;
+    }
+    .actualite_content a{
+        font-size:14x;
+        font-weight:500;
+    }
     /*Fin Actualité CSS*/
 
     /*IUT en chiffre CSS*/
+    .BoxiutEnChiffre h3{
+        font-size:18px;
+        font-weight:700;
+        color: #555;
+        font-family:"Open Sans", Arial, sans-serif;
+    }
     .BoxiutEnChiffre p{
-        color: #333;
+        font-size:72px;
+        font-weight:500;
+        font-family:"Open Sans", Arial, sans-serif;
+        color: #667;
     }
     /*Fin IUT en chiffre CSS*/
 }
-/*Fin Page réduite*/
+/*Fin Page réduite */
