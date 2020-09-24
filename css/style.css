@@ -7,20 +7,18 @@ background-color: #747d88; = gris pour la police
 background-color: #cf0a2c; = rouge
 */
 body{
-    font-family:"Open Sans", Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     width: 100%;
-    transition: 0.8s;
+    transition: 1s;
 }
 h1, h2, h3, h4, h5{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 10px;
 }
+
 a{
-    font-family:"Open Sans", Arial, sans-serif;
     text-decoration: none;
     color: black;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing:2px;
 }
 
 /*Button et ses animations*/
@@ -28,13 +26,14 @@ a{
     padding-bottom: 20px;
 }
 .button a{
-    font-family:"Open Sans", Arial, sans-serif;
     position: relative;
     text-decoration: none;
     border: solid 2px white;
     padding: 4.8px 16px 4.8px 16px;
     border-radius: 12px;
+    font-size: 16px;
     color: white;
+    font-weight: 700;
     cursor: pointer;/*Curseur*/
     display: inline-block;
     
@@ -177,23 +176,22 @@ a{
 #banniere_text_contenue{/*Contenue de la banière*/
     width: 60%; /*Taille occupé sur l'écran*/
     background-color: #eaa903;
-    padding: 10px 135px 30px 135px;
+    padding: 2% 8%;
     color: white;
 }
 #banniere_text_contenue h1{
-    font-family:'Montserrat', sans-serif;
-    font-size:60px;
-    font-weight:700;
+    font-weight: 600;
     text-transform: uppercase;
+    font-size: 55px;
     color: #f7f7f7f7;
-    line-height:78px;
+    line-height: 1.3em;
     padding-bottom: 10px;
 }
 #banniere_text_contenue p{
-    font-family:'Montserrat', sans-serif;
     color: #353740;
-    font-size:20px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-bottom: 15px;
     font-weight: 500;
 }
 
@@ -201,7 +199,7 @@ a{
     background-image: url(../images/photo-IUT.jpg);
     width: 40%;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 40% 40%;
     
 }
 /*Fin Bannière CSS*/
@@ -211,29 +209,28 @@ a{
     margin: 100px 60px 100px 60px;
     text-align: center;
 }
-#titreCandidature h1{
-    font-family:Montserrat, sans-serif;
+#titreCandidature
+{
     color: #747d88;
+    line-height: 1.9em;
     text-align: center;
-    font-size: 36px;
-    font-weight:500;
-    line-height:68.4px;
+    font-size: 14px;
+    font-weight: 500;
     margin-bottom: 30px;
 }
 #phraseCalendrierCandidature
 {
-    color: #555;
-    font-size: 22px;
-    font-weight: 700;
-    line-height:30.8px;
-    text-align: left;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
     padding-bottom: 30px;
-    text-size-adjust:100%;
 }
 #div_btn{
     text-align: center;
 }
 .button_jaune a{
+    font-size: 18px;
     border: solid 2px #eaa903;
     color: #eaa903;
 }
@@ -243,53 +240,65 @@ a{
 {
     background-color: #eaa903;
     color: white;
-    padding: 50px 0 80px 0;
+    padding: 60px 0 60px 0;
 }
 #Diplome_Content{
-    max-width: 1500px;
-    margin: 0 auto;
+    max-width: 80%;
+    margin:auto;
     text-align: center;
-    padding: 30px;
+    padding:0;
+
+
 }
 #Diplome_Content h1
 {
-    font-family:'Montserrat', sans-serif;
     margin: 0 auto;
-    padding: 20px 0 0 0;
+    padding: 2% 0 2% 0;
     font-weight: 500;
     font-size: 36px;
 }
 #Diplomes{
     display: flex;
-    align-items: center;
+    padding:25px 0 25px 0;
+    margin: auto;
 }
 .diplome{
     display: flex;
-    flex-wrap: row wrap;
+    flex-wrap: wrap;
     flex: 1;
-    margin: 15px;
-    padding: 15px;
+    margin: 0 3% 0 0;
+    padding: 30px;
+    
+    
+}
+.diplome .icon{
+    font-size: 60px;
+    margin: 16px 0;
+    
 }
 .diplome > *{
-    flex: 1 100%;
+    flex: 1 1 100%;
 }
 .diplome h5{
-    font-family:'Montserrat', sans-serif;
-    font-size:22px;
+    font-size: 20px;
     font-weight: 700;
 }
 .diplome p{
-    font-family:'Montserrat', sans-serif;
-    font-size:16px;
-    font-weight:500;
-    line-height:28.8px;
+    font-size:100%;
+    line-height: 1.8em;
 }
+
 .diplome a
 {
     color: white;
     text-align: center;
     text-decoration: none;
 }
+/* @media all and (max-width:980px){
+    .affichage-logo{
+        color: #cf0a2c !important;
+    }
+} */
 
 @font-face {
     font-family: "ETmodules";
@@ -308,18 +317,17 @@ a{
 .actualite{
     padding: 110px 0px 15px 0px;
     width: 100%;
-    background: #FFF;
 }
 .actualite h1{
-    font-family:Montserrat, sans-serif;
     text-align: center;
     font-size: 36px;
     color: #747d88;
 }
-.actualite_container{
-    justify-content: center;
+.actualite_box{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
 }
 .actualite_content a{
     text-decoration: none;
@@ -331,30 +339,35 @@ a{
     margin-bottom: 20px;
     font-weight: 700;
     color: #555;
-    font-size: 18px;
-    font-family:"Open Sans", Arial, sans-serif;
+    font-size: 20px;
+}
+.actualite_container{
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: flex-start;
 }
 .actualite_container .actualite_card{
-    text-size-adjust:100%;
-    display: block;
-    max-width: 310px;
-    border: solid 1px #8f918d;
-    margin: 30px;
+    border: solid 1px #d8d8d8;
+    max-width: 400px;
+    margin: 10px;
+    
 }
 .actualite_container .actualite_card .actualite_image_box{
-    width: 310px;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    left: 0;
 }
 .actualite_container .actualite_card .actualite_image_box img{
-    width: 100%;
-    height: 100%;
+    max-width: 310px;
 }
 .actualite_container .actualite_card .actualite_content{
-    color: #667;
     max-width: 278px;
     margin: 10px;
     position: relative;
-    text-align: left;
-    font-size: 14px;
 }
 .actualite_container .actualite_card a{
     color: #cf0a2c;
@@ -366,18 +379,6 @@ a{
 }
 .button_jaune:hover a{
     transition: 0.5s;
-}
-@media all and (max-width: 770px) {
-    
-    .RentreeBox{
-        flex: 1;
-    }
-    .ReouvertureBox{
-        flex: 1;
-    }
-    .ExamensBox{
-        flex: 1;
-    }
 }
 /*Fin Actualite*/
 
@@ -402,10 +403,11 @@ a{
 
 #Chiffre{
     text-align: center;
-    width: 90%;
-    margin: 50px auto;
+    margin: auto;
     display: flex;
     justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 .BoxiutEnChiffre{
     width: 220px;
@@ -530,7 +532,7 @@ footer .image-res{
 
 
 /*Page réduite*/
-@media all and (max-width: 980px) {
+@media only all and (max-width: 980px) {
     /*background-color: #f2f2f2; gris clair button hover*/
     
     article{
@@ -545,8 +547,8 @@ footer .image-res{
     .button a{
         color: #cf0a2c;
         border: solid 2px #cf0a2c;
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 0;
         border-radius: 0%;
     }
     .button:hover a {
@@ -581,9 +583,8 @@ footer .image-res{
     #banniere_text_contenue h1{
         font-weight: bold;
         font-size: 30px;
-        font-weight:900;
         padding-bottom: 15px;
-        color: #555;
+        color: #333;
         margin: 0%;
         padding: 0 0 10px 0;
     }
@@ -595,15 +596,11 @@ footer .image-res{
     /*Fin Bannière CSS*/
 
     /*Candidature CSS*/
-    #titreCandidature h1{
-        font-size:14px;
-        color: #667;
-    }
     #phraseCalendrierCandidature{
         margin: 0 10px 0 10px;
-        font-size: 22px;
+        font-size: 20px;
         text-align: left;
-        font-weight: 700;
+        font-weight: bold;
     }
     /*Fin Candidature CSS*/
 
@@ -617,44 +614,24 @@ footer .image-res{
         color: #333;
     }
     .diplome h5{
-        font-size:18px;
-        font-weight:700;
         color: #333;
     }
     .diplome p{
-        font-size:14px;
-        font-weight:500;
         color: #333;
     }
-    .diplome .affichage-logo{
-        color: #cf0a2c;
+    .affichage-logo{
+        color: #cf0a2c !important;
     }
     /*Fin Diplome CSS*/
 
     /*Actualité CSS*/
-    .actualite h1{
-        font-size: 14px;
-        color: #333;
-    }
-    .actualite_content a{
-        font-size:14x;
-        font-weight:500;
-    }
+
     /*Fin Actualité CSS*/
 
     /*IUT en chiffre CSS*/
-    .BoxiutEnChiffre h3{
-        font-size:18px;
-        font-weight:700;
-        color: #555;
-        font-family:"Open Sans", Arial, sans-serif;
-    }
     .BoxiutEnChiffre p{
-        font-size:72px;
-        font-weight:500;
-        font-family:"Open Sans", Arial, sans-serif;
-        color: #667;
+        color: #333;
     }
     /*Fin IUT en chiffre CSS*/
 }
-/*Fin Page réduite */
+/*Fin Page réduite*/
