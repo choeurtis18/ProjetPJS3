@@ -21,14 +21,34 @@ a{
 }
 
 /*Pour les scrolls annimations*/
-.partie{
-    opacity: 1;
-    transition: opacity 1s;
-}
-.partie .not_visible{
+.apparaitre.not_visible{
     opacity: 0;
 }
-
+.apparaitre{
+    opacity: 1;
+    transition: opacity 2.5s;
+}
+.texte_banniere{
+    transform: translateY(-50px);
+}
+.texte_banniere.apparition{
+    transform: translateY(0);
+    transition: transform 2.5s;
+}
+.diplome.zoom{
+    animation: txt_zoom 2.5s ease-out normal;
+}
+.BoxiutEnChiffre.zoom{
+    animation: txt_zoom 1s ease-out normal;
+}
+@keyframes txt_zoom{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 
 /*Button et ses animations*/
 .button{
@@ -407,7 +427,7 @@ input{
     margin: 0 3% 0 0;
     padding: 30px;
     
-    
+
 }
 .diplome .icon{
     font-size: 60px;
@@ -477,15 +497,30 @@ input{
     position: relative;
     width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 20px;
     align-items: flex-start;
+    flex-wrap: wrap;
+}
+@media only all and (max-width: 1011px) {
+    .actualite_container{
+        justify-content: space-between;
+    }
+    .ExamensBox{
+        position: relative;
+        top: -200px;
+    }
+}
+@media only all and (max-width: 691px) {
+    .actualite_container{
+        display: flex;
+        justify-content: space-around;
+    }
 }
 .actualite_container .actualite_card{
     border: solid 1px #d8d8d8;
     max-width: 400px;
     margin: 10px;
-    
 }
 .actualite_container .actualite_card .actualite_image_box{
     position: relative;
