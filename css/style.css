@@ -9,10 +9,10 @@ background-color: #cf0a2c; = rouge
 /*Propiétés général de la page*/
 body{
     font-family: 'Arial', sans-serif;
-    width: 100%;
+    
 }
 h1, h2, h3, h4, h5{
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding-bottom: 10px;
 }
 a{
@@ -24,16 +24,18 @@ a{
 .partie{
     opacity: 1;
     transition: opacity 1s;
+
 }
 .partie .not_visible{
     opacity: 0;
 }
 
+.home_page {
+    margin-top: 152px;
+}
 
 /*Button et ses animations*/
-.button{
-    padding-bottom: 20px;
-}
+
 .button a{
     position: relative;
     text-decoration: none;
@@ -313,11 +315,21 @@ input{
 /*Fin Menu*/
 
 /*Bannière CSS*/
+
+#banniere{
+    background-blend-mode: multiply!important;
+    background-image: url(../images/logo-opaque.png);
+    background-color: #eaa903;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin:0;
+}
 #banniere_text_contenue{/*Contenue de la banière*/
     width: 60%; /*Taille occupé sur l'écran par le contenue*/
-    background-color: #eaa903;
     padding: 2% 8%;
     color: white;
+    
 }
 #banniere_text_contenue h1{
     font-weight: 600;
@@ -345,29 +357,45 @@ input{
 /*Fin Bannière CSS*/
 
 /*Candidature CSS*/
+
 #SectionCandidature{
-    margin: 100px 60px 100px 60px;
-    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.row-candidature{
+    display: flex;
+    flex-direction: column;
+	width: 80%;
+    margin:auto;
+    max-width: 1080px;
+    padding: 2% 0;
+
 }
 #titreCandidature
 {
     color: #747d88;
-    line-height: 1.9em;
     text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 1.9em;
 }
+/* .partie h3{
+    font-size: 22px;
+    font-weight: 700;
+    color: #555;
+    line-height: 1.4em;
+    margin-bottom: 2.75%;
+} */
 #phraseCalendrierCandidature
 {
     color: #333;
     font-weight: 600;
-    text-align: center;
     font-size: 25px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 #div_btn{
     text-align: center;
+	  margin-bottom: 40px;
 }
 .button_jaune a{
     font-size: 18px;
@@ -448,61 +476,91 @@ input{
 /*Actualite*/
 .actualite{
     padding: 110px 0px 15px 0px;
-    width: 100%;
+    margin: auto;
 }
 .actualite h1{
     text-align: center;
     font-size: 36px;
     color: #747d88;
+  	margin-bottom: 2.75%;
 }
 .actualite_box{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     background: #FFF;
+    width: 80%;
+    margin: auto;
+	  max-width: 1080px;
+	 margin-bottom: 40px;
 }
 .actualite_content a{
     text-decoration: none;
+    color:#666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7em;
 }
-.actualite_container h3{
-    text-align: left;
-    border-left: solid 4px #cf0a2c;
-    padding: 0px 20px 0px 20px;
-    margin-bottom: 20px;
+.actualite_container h2 {
     font-weight: 700;
-    color: #555;
-    font-size: 20px;
+	color: #555;
+	border-left: 4px solid #CF0A2C;
+	padding-left: 12px;
+	line-height: 1.5em;
+	margin-bottom: 20px;
+	padding-bottom: 0;
+	font-size: 18px;
 }
+.actualite_container p {
+    color:#666;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7em;
+    margin-bottom:0;
+    font-size: 14px;
+}
+
+.lien-iut{
+    color: #cf0a2c!important;
+}
+
 .actualite_container{
     position: relative;
-    width: 1200px;
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+
     align-items: flex-start;
 }
-.actualite_container .actualite_card{
+.actualite_card{
+    width: 29.667%;
+    margin-right: 5.5%;
+    float: left;
+    max-width: 100%;
     border: solid 1px #d8d8d8;
     max-width: 400px;
-    margin: 10px;
-    
+    padding: 5px;
+
 }
-.actualite_container .actualite_card .actualite_image_box{
+
+
+.actualite_image_box{
+    display: block;
     position: relative;
-    width: 100%;
-    height: 200px;
-    left: 0;
+    margin-bottom: 30px;
+  	margin: -5px -5px 29px;
 }
-.actualite_container .actualite_card .actualite_image_box img{
-    max-width: 310px;
+.actualite_image_box img {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
 }
-.actualite_container .actualite_card .actualite_content{
+
+.actualite_content{
     max-width: 278px;
     margin: 10px;
     position: relative;
 }
-.actualite_container .actualite_card a{
-    color: #cf0a2c;
+.actualite_card:last-child{
+    margin-right: 0px;
 }
 .button_jaune a{
     border: solid 2px #eaa903;
@@ -520,9 +578,11 @@ input{
  #iutEnChiffre {
     background-color: #eaa903;
     color: white;
-    padding: 50px 0 50px 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
     
 }
+
 #titreIutEnChiffre {
     text-align: center;
     padding: 20px 0 20px 0;
@@ -535,30 +595,49 @@ input{
     text-align: center;
     margin: auto;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     padding-top: 40px;
     padding-bottom: 20px;
+    width: 80%;
 }
+
 .BoxiutEnChiffre{
-    width: 220px;
-    height: 120px;
-    margin: 0px 10px;
     text-transform: uppercase;
+    margin-right: 5.5%;
+    width: 15.6%;
+    text-align: center;
 }
+
+.BoxiutEnChiffre:last-child {
+    margin-right: 0;
+}
+
 .nbr{
     font-weight: 700;
     color:  #ffffff;
     text-align: center;
     font-size: 60px;
-
+    margin-bottom: 0px;
+	
 }
+#titreIutEnChiffre p{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    line-height: 1.9em;
+    }
 
-.title{
-    font-weight: bold;
-    color:  #353740;
-    text-align: center;
+.partie h3{
+    color: #353740;
+    position: relative;
     font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+
 }
+
 /*Fin IUT en chiffre*/
 
 /*Footer*/
@@ -573,13 +652,19 @@ footer .container{
     text-align: left; 
 }
 
-footer .row{
+footer .row {
+    flex-wrap: nowrap !important;
+}
+
+footer .row >div{
     margin: 0px;
     padding-bottom: 20px;
+
+    
 }
 footer .row-1{
     margin: 0px;
-    padding-top: 6%;
+    padding-top: 2.5%;
     
 }
 footer p{
@@ -618,11 +703,11 @@ footer{
 
 }
 
-footer .col {
+footer .information-iut {
     width: 29.667%;
     float: left;
-    margin-right: 5.5%; 
-    margin-bottom: 5.5%;
+    margin-right: 5.5%!important; 
+    margin-bottom: 5.5%!important;
     padding: 0;
     
 
@@ -691,13 +776,17 @@ footer .image-res{
     }
 
     /*Bannière CSS*/
+    .home_page{
+        padding: 50px 0;
+        margin:0;
+    }
     #banniere_text_contenue{
         display: block;
         box-sizing: border-box;
-        width: 100%;
+        width: 80%;
         background-color: white;
-        padding-left: 100px;
-        padding-right: 100px;
+        padding:0;
+        margin:auto;
         color: black;
     }
     #banniere_text_contenue h1{
@@ -745,13 +834,88 @@ footer .image-res{
     /*Fin Diplome CSS*/
 
     /*Actualité CSS*/
-
+    .actualite_container{
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
     /*Fin Actualité CSS*/
 
     /*IUT en chiffre CSS*/
-    .BoxiutEnChiffre p{
-        color: #333;
+    .BoxiutEnChiffre:last-child {
+        margin-right:0;
     }
+
+    .BoxiutEnChiffre p{
+        
+        
+        font-size: 72px;
+        font-weight: 500;
+        text-align: center;
+        font-family: "Open Sans", Arial, sans-serif;
+        color: #666;
+        
+    }
+
+    #titreIutEnChiffre {
+        text-align: center;
+        padding: 0px;
+        margin: 0 170px 0 170px;
+        font-weight: 500px;
+        font-size: 14px;
+        font-family: "Open Sans", Arial, sans-serif;
+        color: #666;
+    }
+
+    #Chiffre{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    
+        }
+
+    .BoxiutEnChiffre{
+    position: center;
+    width: 40%;
+    }
+
+
+
+    .title h3{
+        font-weight: 700;
+        color: #555;
+        font-family: "Open Sans", Arial, sans-serif!important;
+        text-align: center;
+        text-transform: none;
+        font-size: 18px;
+
+    }
+
+
     /*Fin IUT en chiffre CSS*/
-}
+
+    /*Footer*/
+    footer .row{
+        flex-wrap: wrap!important; 
+    }
+
+    footer .information-iut{
+        width:100%; 
+    }
+
+        
+    /*Fin Footer*/
+    
+} 
+
+
+
 /*Fin Page réduite*/
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
