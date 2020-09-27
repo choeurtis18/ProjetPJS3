@@ -35,14 +35,18 @@ a{
 }
 
 /*Button et ses animations*/
+.button{
+    margin-bottom: 20px;
+}
 
 .button a{
+    font-family: 'Open Sans', sans-serif !important;
+    letter-spacing: 2px;
     position: relative;
     text-decoration: none;
     border: solid 2px white;
     padding: 4.8px 16px 4.8px 16px;
-    border-radius: 12px;
-    font-size: 16px;
+    border-radius: 100px;
     color: white;
     font-weight: 700;
     cursor: pointer;/*Curseur*/
@@ -50,11 +54,10 @@ a{
     
 }
 .button a:after {
-    content: '\00bb';
+    font-family: 'ETmodules';
+    content: 'E';
     position: absolute;
     opacity: 0;
-    top: 0;
-    right: -20px;
 }
 .button:hover a {
     padding-right: 30px;
@@ -78,15 +81,18 @@ header{
 	width: 100%;
 	position: fixed;
 	border-bottom: 1.5px #e7e7e7 solid;
-	z-index: 1;
+	z-index: 99999;
 }
+
 #top-menu{
 	background-color: #cf0a2c;
 	height: 32px;
 }
+#top-menu .fa{
+	font-size: 16px;
+}
 #top-menu .container{
 	padding-top: 0.2em;
-	font-weight: 600;
 }
 #menu-social{
 	float: right;
@@ -100,7 +106,8 @@ header{
 	color: white;
 }
 .lien{
-	font-size: 13px;
+	font-size: 12px;
+	font-weight: 600;
 }
 .fa:hover, .lien:hover{
 	color: white;
@@ -112,20 +119,21 @@ header{
 	width: 29%;
 }
 #logo img{
-	width: 60%;
-	height: 60%;
-	padding-top: 25px;
-	margin-right: 50px;
-	float: right;
+	height: 60px;
+	width: 210px;
+	margin-top: 30px;
+	margin-left: 50px;
 }
 #barre{
 	height: 120px;
 	background-color: white;
+	font-weight: 600;
+	font-family: "Open Sans", Arial, sans-serif;
 }
 #menu{
 	float: none;
 	display: inline;
-	padding-left: 10px;
+	padding-left: 10px
 }
 .nav-item{
 	padding-top: 10px;
@@ -136,13 +144,14 @@ header{
 }
 #menu li{
 	padding-right: 14px;
-	font-size: 16px;
 }
 #menu a{
-	color: #354425!important;
+	color: #666666!important;
+	font-size: 15px;
 }
 #covid{
 	background-color: #eaa903;
+	width: 80px;
 }
 #menu a:hover{
 	opacity: 0.8;
@@ -167,6 +176,10 @@ header{
 #search{
 	background-color: white;
 	border: none;
+	font-size: 20px!important;
+	position: absolute;
+	top: 25px;
+	transform: scaleX(-1);
 }
 #search:hover{
 	color: #cf0a2c!important;
@@ -224,11 +237,7 @@ header{
 }
 #mobile{
 	display: none;
-	margin-left: 40px;
-}
-#search{
-	position: absolute;
-	top: 25px;
+	font-size: 20px!important;
 }
 #close{
 	display: none;
@@ -265,12 +274,50 @@ input{
 	font-size: 20px;
 }
 
-@media screen and (min-width: 991px) and (max-width: 1200px) {
-	#logo img{
-		margin-right: 100px;
+@media screen and (min-width: 1131px) and (max-width: 1200px) {
+	#barre{
+		height: 180px;
 	}
-	#menu li{
-		padding-right: 5px;
+	.navbar-nav{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	#logo img{
+		height: 90px;
+		width: 270px;
+		margin-top: 45px;
+		margin-left: 95px;
+	}
+	.nav-item{
+		padding-top: 10px;
+		height: 72px;
+	}
+	#trou{
+		height: 212px;
+	}
+}
+
+@media screen and (min-width: 991px) and (max-width: 1130px) {
+	#barre{
+		height: 180px;
+	}
+	.navbar-nav{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-left: 70px;
+	}
+	#logo img{
+		height: 90px;
+		width: 270px;
+		margin-top: 45px;
+		margin-left: 95px;
+	}
+	.nav-item{
+		padding-top: 10px;
+		height: 72px;
+	}
+	#trou{
+		height: 212px;
 	}
 }
 
@@ -284,32 +331,45 @@ input{
 	#mobile{
 		display: block;
 	}
+	#mobile-icone, #mobile-icone2{
+		position: absolute;
+		top: 6px;
+		right: 40px;
+		font-size: 20px!important;
+	}
 	#logo{
 		width: 60%;
 	}
 	#logo img{
-		width: 60%;
-		height: 60%;
-		margin-left: 60px;
-		padding-top: 15px;
+		width: 150px;
+		height: 45px;
+		position: relative;
+		top: 15px;
+		margin: 0px;
+
 	}
 	#barre{
 		height: 80px;
 	}
 	form{
-		width: 150px;
+		width: 200px;
+		position: absolute;
+		bottom: -10px;
+		right: 50px;
 	}
 	#ouvrir:target #mobile{
 		display: none;
 	}
 	#close{
-		position: absolute;
-		top: 10px;
-		left: 150px;
+		font-size: 20px!important;
 	}
 	#search{
 		position: absolute;
-		top: 15px;
+		top: 6px;
+		right: 100px;
+	}
+	#trou{
+		display: none;
 	}
 }
 /*Fin Menu*/
@@ -341,7 +401,7 @@ input{
 }
 #banniere_text_contenue p{
     color: #353740;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8em;
     margin-bottom: 15px;
     font-weight: 500;
@@ -379,13 +439,12 @@ input{
     font-size: 36px;
     line-height: 1.9em;
 }
-/* .partie h3{
+#SectionCandidature h3{
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 700!important;
     color: #555;
-    line-height: 1.4em;
-    margin-bottom: 2.75%;
-} */
+
+}
 #phraseCalendrierCandidature
 {
     color: #333;
@@ -404,6 +463,13 @@ input{
 }
 
 /*Diplome*/
+#title-diplomes{
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    line-height: 1.9em;
+}
 #SectionDiplomes
 {
     background-color: #eaa903;
@@ -425,26 +491,27 @@ input{
 }
 #Diplomes{
     display: flex;
+    flex-wrap: wrap;
     padding:25px 0 25px 0;
     margin: auto;
 }
 .diplome{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    margin: 0 3% 0 0;
+    width: 22.75%;
+    margin-right: 3%;
     padding: 30px;
-    
-    
+       
+}
+.diplome:last-child{
+    margin-right:0;
 }
 .diplome .icon{
     font-size: 60px;
     margin: 16px 0;
     
 }
-.diplome > *{
+/* .diplome > *{
     flex: 1 1 100%;
-}
+} */
 .diplome h5{
     font-size: 20px;
     font-weight: 700;
@@ -478,21 +545,21 @@ input{
     padding: 110px 0px 15px 0px;
     margin: auto;
 }
-.actualite h1{
-    text-align: center;
+#title-act{
+    color: #747d88 !important;
+    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
-    color: #747d88;
-  	margin-bottom: 2.75%;
+    line-height: 1.4em;
+    text-align: center;
 }
 .actualite_box{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background: #FFF;
     width: 80%;
     margin: auto;
-	  max-width: 1080px;
-	 margin-bottom: 40px;
+	max-width: 1080px;
+	margin-bottom: 40px;
 }
 .actualite_content a{
     text-decoration: none;
@@ -524,41 +591,30 @@ input{
 }
 
 .actualite_container{
-    position: relative;
     display: flex;
     justify-content: space-between;
-
     align-items: flex-start;
 }
 .actualite_card{
     width: 29.667%;
-    margin-right: 5.5%;
-    float: left;
-    max-width: 100%;
+    /* margin-right: 5.5%; */
+    /* float: left; */
+    /* max-width: 100%; */
     border: solid 1px #d8d8d8;
-    max-width: 400px;
-    padding: 5px;
+    padding: 19px;
 
 }
-
-
 .actualite_image_box{
-    display: block;
-    position: relative;
-    margin-bottom: 30px;
-  	margin: -5px -5px 29px;
+    margin: -20px -20px 29px; 
 }
 .actualite_image_box img {
-	width: 100%;
-	height: auto;
-	vertical-align: bottom;
+    
+    /*height: auto;
+    vertical-align: bottom;*/
+    width: 100%;
+
 }
 
-.actualite_content{
-    max-width: 278px;
-    margin: 10px;
-    position: relative;
-}
 .actualite_card:last-child{
     margin-right: 0px;
 }
@@ -600,6 +656,7 @@ input{
     padding-top: 40px;
     padding-bottom: 20px;
     width: 80%;
+    max-width: 1080px;
 }
 
 .BoxiutEnChiffre{
@@ -648,7 +705,7 @@ footer .container{
     display: block;
     width: 80%;
     max-width: 1080px;
-    padding: 0;
+    padding-top: 2.25%;
     text-align: left; 
 }
 
@@ -658,15 +715,9 @@ footer .row {
 
 footer .row >div{
     margin: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;  
+}
 
-    
-}
-footer .row-1{
-    margin: 0px;
-    padding-top: 2.5%;
-    
-}
 footer p{
     display: inline-block;
     color:white;
@@ -732,6 +783,11 @@ footer .image-res{
     font-style: normal;
     font-weight: 700;
 }
+@font-face {
+    font-family: "Open Sans";
+    src: url("font/open-sans-800.woff2") format("woff2");
+    font-weight: 800;
+  }
 
 /*Fin Footer*/
 
@@ -739,7 +795,11 @@ footer .image-res{
 /*Page réduite*/
 @media only all and (max-width: 980px) {
     /*background-color: #f2f2f2; gris clair button hover*/
-    
+    .title {
+        color: #666!important;
+        font-family: "Open Sans", Arial, sans-serif!important;
+        font-size: 14px!important;
+    }
     article{
         background-color: #ffffff !important;
     }
@@ -779,28 +839,37 @@ footer .image-res{
     .home_page{
         padding: 50px 0;
         margin:0;
+
+    }
+    #banniere{
+        background-color: white;
+        background-image: none;
     }
     #banniere_text_contenue{
         display: block;
         box-sizing: border-box;
         width: 80%;
-        background-color: white;
+
         padding:0;
         margin:auto;
         color: black;
     }
     #banniere_text_contenue h1{
-        font-weight: bold;
+        font-weight: 800;
+        color: #555;
         font-size: 30px;
-        padding-bottom: 15px;
-        color: #333;
-        margin: 0%;
-        padding: 0 0 10px 0;
+        text-transform: none;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        
+        
     }
+
     #banniere_text_contenue p{
         font-size: 14px;
         margin: 0%;
         padding: 0%;
+        color: #666;
     }
     /*Fin Bannière CSS*/
 
@@ -810,10 +879,21 @@ footer .image-res{
         font-size: 20px;
         text-align: left;
         font-weight: bold;
+
     }
     /*Fin Candidature CSS*/
 
     /*Diplome CSS*/
+    .diplome{
+        width: 47.25%;
+        margin-right: 5.5%;
+        margin-bottom: 30px;
+        padding:0;
+    }
+    .diplome:nth-child(2n) {
+        margin-right: 0;
+    }
+
     #SectionDiplomes{
         margin: 0%;
         padding: 0%;
@@ -837,14 +917,26 @@ footer .image-res{
     .actualite_container{
         flex-direction: column;
         margin-bottom: 30px;
+        width: 100%;
     }
+    .actualite_card{
+        width: 100%;
+        margin-bottom:60px;
+        margin-bottom: 30px;
+        padding: 19px;
+    }
+
     /*Fin Actualité CSS*/
 
     /*IUT en chiffre CSS*/
+    
     .BoxiutEnChiffre:last-child {
-        margin-right:0;
+        margin:0;
+        float: left;
     }
-
+    .BoxiutEnChiffre:nth-child(2n){
+        margin-right: 0;
+    }
     .BoxiutEnChiffre p{
         
         
@@ -869,13 +961,13 @@ footer .image-res{
     #Chiffre{
         text-align: center;
         display: flex;
-        flex-direction: column;
-    
+        flex-wrap: wrap;
+        justify-content: flex-start
         }
 
     .BoxiutEnChiffre{
     position: center;
-    width: 40%;
+    width: 47.25%;
     }
 
 
@@ -895,7 +987,8 @@ footer .image-res{
 
     /*Footer*/
     footer .row{
-        flex-wrap: wrap!important; 
+        flex-wrap: wrap!important;
+        padding-top: 10%; 
     }
 
     footer .information-iut{
@@ -907,7 +1000,12 @@ footer .image-res{
     
 } 
 
-
+@media all and (max-width:470px){
+    #Chiffre{
+        flex-direction: column;
+        align-content: center;
+    }
+}
 
 /*Fin Page réduite*/
 
