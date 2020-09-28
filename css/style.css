@@ -49,7 +49,7 @@ a{
   }
 
 /*Pour les scrolls annimations*/
-.appararaitre.not_visible{
+.apparaitre.not_visible{
     opacity: 0;
 }
 .apparaitre{
@@ -64,7 +64,7 @@ a{
     transition: transform 2.5s;
 }
 .diplome.zoom{
-    animation: txt_zoom 2.5s ease-out normal;
+    animation: txt_zoom 1s ease-out normal;
 }
 .BoxiutEnChiffre.zoom{
     animation: txt_zoom 1s ease-out normal;
@@ -247,6 +247,7 @@ header{
 	text-decoration: none;
 }
 #mobile-menu{
+    z-index: 99999;
 	display: none;
 	border-top: 3px #cf0a2c solid;
 	margin-top: 5px;

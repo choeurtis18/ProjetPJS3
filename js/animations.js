@@ -44,7 +44,7 @@
         item.classList.add('not_visible')
         observerPage.observe(item)
     })
-    let texte_banniere = document.querySelectorAll('.texte_banniere')
+    let texte_banniere = document.querySelectorAll('.text_banniere')
     texte_banniere.forEach(function (item) {
         observerApparition.observe(item)
     })
