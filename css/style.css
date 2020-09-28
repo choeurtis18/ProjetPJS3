@@ -77,6 +77,10 @@ a{
         transform: scale(1);
     }
 }
+/*espacement entre le body-navbar*/
+.home_page {
+    margin-top: 152px;
+}
 
 /*espacement entre le body-navbar*/
 .home_page {
@@ -548,7 +552,6 @@ input{
     width: 22.75%;
     margin-right: 3%;
     padding: 30px;
-       
 }
 .diplome:last-child{
     margin-right:0;
