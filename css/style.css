@@ -7,12 +7,13 @@ background-color: #747d88; = gris pour la police
 background-color: #cf0a2c; = rouge
 */
 /*Propiétés général de la page*/
+
 body{
     font-family: 'Arial', sans-serif;
-    width: 100%;
+    
 }
 h1, h2, h3, h4, h5{
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding-bottom: 10px;
 }
 a{
@@ -20,18 +21,45 @@ a{
     color: black;
 }
 
+/*Font pour les icônes et autres police*/
+@font-face {
+    font-family: "ETmodules";
+    src: url("font/modules.eot") format("embedded-opentype"), url("font/modules.ttf") format("truetype"), url("font/modules.woff") format("woff"), url("font/modules.svg") format("svg");
+    font-style: normal;
+    font-weight: normal;
+  }
+
+@font-face {
+    font-family: "Open Sans";
+    src: local("Open Sans Regular"), local("OpenSans-Regular"), url("font/open-sans-v15-latin-ext_latin-regular.eot") format("embedded-opentype"), url("font/open-sans-v15-latin-ext_latin-regular.woff2") format("woff2"), url("font/open-sans-v15-latin-ext_latin-regular.woff") format("woff"), url("font/open-sans-v15-latin-ext_latin-regular.ttf") format("truetype"), url("font/open-sans-v15-latin-ext_latin-regular.svg") format("svg");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: local("Open Sans Bold"), local("OpenSans-Bold"), url("font/open-sans-v15-latin-ext_latin-700.eot") format("embedded-opentype"), url("font/open-sans-v15-latin-ext_latin-700.woff2") format("woff2"), url("font/open-sans-v15-latin-ext_latin-700.woff") format("woff"), url("font/open-sans-v15-latin-ext_latin-700.ttf") format("truetype"), url("fonts/open-sans-v15-latin-ext_latin-700.svg") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("font/open-sans-800.woff2") format("woff2");
+    font-weight: 800;
+  }
+
 /*Pour les scrolls annimations*/
-.apparaitre.not_visible{
+.appararaitre.not_visible{
     opacity: 0;
 }
 .apparaitre{
     opacity: 1;
     transition: opacity 2.5s;
 }
-.texte_banniere{
+.text_banniere{
     transform: translateY(-50px);
 }
-.texte_banniere.apparition{
+.text_banniere.apparition{
     transform: translateY(0);
     transition: transform 2.5s;
 }
@@ -49,18 +77,24 @@ a{
         transform: scale(1);
     }
 }
+/*espacement entre le body-navbar*/
+.home_page {
+    margin-top: 152px;
+}
 
 /*Button et ses animations*/
 .button{
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
+
 .button a{
+    font-family: 'Open Sans', sans-serif !important;
+    letter-spacing: 2px;
     position: relative;
     text-decoration: none;
     border: solid 2px white;
     padding: 4.8px 16px 4.8px 16px;
-    border-radius: 12px;
-    font-size: 16px;
+    border-radius: 100px;
     color: white;
     font-weight: 700;
     cursor: pointer;/*Curseur*/
@@ -68,11 +102,10 @@ a{
     
 }
 .button a:after {
-    content: '\00bb';
+    font-family: 'ETmodules';
+    content: 'E';
     position: absolute;
     opacity: 0;
-    top: 0;
-    right: -20px;
 }
 .button:hover a {
     padding-right: 30px;
@@ -96,15 +129,18 @@ header{
 	width: 100%;
 	position: fixed;
 	border-bottom: 1.5px #e7e7e7 solid;
-	z-index: 1;
+	z-index: 99999;
 }
+
 #top-menu{
 	background-color: #cf0a2c;
 	height: 32px;
 }
+#top-menu .fa{
+	font-size: 16px;
+}
 #top-menu .container{
 	padding-top: 0.2em;
-	font-weight: 600;
 }
 #menu-social{
 	float: right;
@@ -118,7 +154,8 @@ header{
 	color: white;
 }
 .lien{
-	font-size: 13px;
+	font-size: 12px;
+	font-weight: 600;
 }
 .fa:hover, .lien:hover{
 	color: white;
@@ -130,20 +167,21 @@ header{
 	width: 29%;
 }
 #logo img{
-	width: 60%;
-	height: 60%;
-	padding-top: 25px;
-	margin-right: 50px;
-	float: right;
+	height: 60px;
+	width: 210px;
+	margin-top: 30px;
+	margin-left: 50px;
 }
 #barre{
 	height: 120px;
 	background-color: white;
+	font-weight: 600;
+	font-family: "Open Sans", Arial, sans-serif;
 }
 #menu{
 	float: none;
 	display: inline;
-	padding-left: 10px;
+	padding-left: 10px
 }
 .nav-item{
 	padding-top: 10px;
@@ -154,13 +192,14 @@ header{
 }
 #menu li{
 	padding-right: 14px;
-	font-size: 16px;
 }
 #menu a{
-	color: #354425!important;
+	color: #666666!important;
+	font-size: 15px;
 }
 #covid{
 	background-color: #eaa903;
+	width: 80px;
 }
 #menu a:hover{
 	opacity: 0.8;
@@ -185,6 +224,10 @@ header{
 #search{
 	background-color: white;
 	border: none;
+	font-size: 20px!important;
+	position: absolute;
+	top: 25px;
+	transform: scaleX(-1);
 }
 #search:hover{
 	color: #cf0a2c!important;
@@ -242,11 +285,7 @@ header{
 }
 #mobile{
 	display: none;
-	margin-left: 40px;
-}
-#search{
-	position: absolute;
-	top: 25px;
+	font-size: 20px!important;
 }
 #close{
 	display: none;
@@ -283,12 +322,50 @@ input{
 	font-size: 20px;
 }
 
-@media screen and (min-width: 991px) and (max-width: 1200px) {
-	#logo img{
-		margin-right: 100px;
+@media screen and (min-width: 1131px) and (max-width: 1200px) {
+	#barre{
+		height: 180px;
 	}
-	#menu li{
-		padding-right: 5px;
+	.navbar-nav{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	#logo img{
+		height: 90px;
+		width: 270px;
+		margin-top: 45px;
+		margin-left: 95px;
+	}
+	.nav-item{
+		padding-top: 10px;
+		height: 72px;
+	}
+	#trou{
+		height: 212px;
+	}
+}
+
+@media screen and (min-width: 991px) and (max-width: 1130px) {
+	#barre{
+		height: 180px;
+	}
+	.navbar-nav{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-left: 70px;
+	}
+	#logo img{
+		height: 90px;
+		width: 270px;
+		margin-top: 45px;
+		margin-left: 95px;
+	}
+	.nav-item{
+		padding-top: 10px;
+		height: 72px;
+	}
+	#trou{
+		height: 212px;
 	}
 }
 
@@ -302,42 +379,65 @@ input{
 	#mobile{
 		display: block;
 	}
+	#mobile-icone, #mobile-icone2{
+		position: absolute;
+		top: 6px;
+		right: 40px;
+		font-size: 20px!important;
+	}
 	#logo{
 		width: 60%;
 	}
 	#logo img{
-		width: 60%;
-		height: 60%;
-		margin-left: 60px;
-		padding-top: 15px;
+		width: 150px;
+		height: 45px;
+		position: relative;
+		top: 15px;
+		margin: 0px;
+
 	}
 	#barre{
 		height: 80px;
 	}
 	form{
-		width: 150px;
+		width: 200px;
+		position: absolute;
+		bottom: -10px;
+		right: 50px;
 	}
 	#ouvrir:target #mobile{
 		display: none;
 	}
 	#close{
-		position: absolute;
-		top: 10px;
-		left: 150px;
+		font-size: 20px!important;
 	}
 	#search{
 		position: absolute;
-		top: 15px;
+		top: 6px;
+		right: 100px;
+	}
+	#trou{
+		display: none;
 	}
 }
 /*Fin Menu*/
 
 /*Bannière CSS*/
+
+#banniere{
+    background-blend-mode: multiply!important;
+    background-image: url(../images/logo-opaque.png);
+    background-color: #eaa903;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin:0;
+}
 #banniere_text_contenue{/*Contenue de la banière*/
     width: 60%; /*Taille occupé sur l'écran par le contenue*/
-    background-color: #eaa903;
     padding: 2% 8%;
     color: white;
+    
 }
 #banniere_text_contenue h1{
     font-weight: 600;
@@ -349,7 +449,7 @@ input{
 }
 #banniere_text_contenue p{
     color: #353740;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8em;
     margin-bottom: 15px;
     font-weight: 500;
@@ -365,29 +465,44 @@ input{
 /*Fin Bannière CSS*/
 
 /*Candidature CSS*/
+
 #SectionCandidature{
-    margin: 100px 60px 100px 60px;
-    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.row-candidature{
+    display: flex;
+    flex-direction: column;
+	width: 80%;
+    margin:auto;
+    max-width: 1080px;
+    padding: 2% 0;
+
 }
 #titreCandidature
 {
     color: #747d88;
-    line-height: 1.9em;
     text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 1.9em;
+}
+#SectionCandidature h3{
+    font-size: 22px;
+    font-weight: 700!important;
+    color: #555;
+
 }
 #phraseCalendrierCandidature
 {
     color: #333;
     font-weight: 600;
-    text-align: center;
     font-size: 25px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 #div_btn{
     text-align: center;
+	  margin-bottom: 40px;
 }
 .button_jaune a{
     font-size: 18px;
@@ -396,6 +511,13 @@ input{
 }
 
 /*Diplome*/
+#title-diplomes{
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    line-height: 1.9em;
+}
 #SectionDiplomes
 {
     background-color: #eaa903;
@@ -417,26 +539,26 @@ input{
 }
 #Diplomes{
     display: flex;
+    flex-wrap: wrap;
     padding:25px 0 25px 0;
     margin: auto;
 }
 .diplome{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    margin: 0 3% 0 0;
+    width: 22.75%;
+    margin-right: 3%;
     padding: 30px;
-    
-
+}
+.diplome:last-child{
+    margin-right:0;
 }
 .diplome .icon{
     font-size: 60px;
     margin: 16px 0;
     
 }
-.diplome > *{
+/* .diplome > *{
     flex: 1 1 100%;
-}
+} */
 .diplome h5{
     font-size: 20px;
     font-weight: 700;
@@ -451,54 +573,62 @@ input{
     text-align: center;
     text-decoration: none;
 }
-/*Font pour les icônes*/
-@font-face {
-    font-family: "ETmodules";
-    src: url("font/modules.eot") format("embedded-opentype"), url("font/modules.ttf") format("truetype"), url("font/modules.woff") format("woff"), url("font/modules.svg") format("svg");
-    font-style: normal;
-    font-weight: normal;
-  }
-  .affichage-logo{
-    font-family: "ETmodules";
-    font-size: 60px;
-    color: #ffffff;
-  }
+
 /*Fin Candidature CSS*/
 
 /*Actualite*/
 .actualite{
     padding: 110px 0px 15px 0px;
-    width: 100%;
+    margin: auto;
 }
-.actualite h1{
-    text-align: center;
+#title-act{
+    color: #747d88 !important;
+    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
-    color: #747d88;
+    line-height: 1.4em;
+    text-align: center;
 }
 .actualite_box{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     background: #FFF;
+    width: 80%;
+    margin: auto;
+	max-width: 1080px;
+	margin-bottom: 40px;
 }
 .actualite_content a{
     text-decoration: none;
+    color:#666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7em;
 }
-.actualite_container h3{
-    text-align: left;
-    border-left: solid 4px #cf0a2c;
-    padding: 0px 20px 0px 20px;
-    margin-bottom: 20px;
+.actualite_container h2 {
     font-weight: 700;
-    color: #555;
-    font-size: 20px;
+	color: #555;
+	border-left: 4px solid #CF0A2C;
+	padding-left: 12px;
+	line-height: 1.5em;
+	margin-bottom: 20px;
+	padding-bottom: 0;
+	font-size: 18px;
 }
+.actualite_container p {
+    color:#666;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7em;
+    margin-bottom:0;
+    font-size: 14px;
+}
+
+.lien-iut{
+    color: #cf0a2c!important;
+}
+
 .actualite_container{
-    position: relative;
-    width: 1200px;
     display: flex;
-    justify-content: space-around;
-    margin: 20px;
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
 }
@@ -517,27 +647,27 @@ input{
         justify-content: space-around;
     }
 }
-.actualite_container .actualite_card{
+.actualite_card{
+    width: 29.667%;
+    /* margin-right: 5.5%; */
+    /* float: left; */
+    /* max-width: 100%; */
     border: solid 1px #d8d8d8;
-    max-width: 400px;
-    margin: 10px;
+    padding: 19px;
 }
-.actualite_container .actualite_card .actualite_image_box{
-    position: relative;
+.actualite_image_box{
+    margin: -20px -20px 29px; 
+}
+.actualite_image_box img {
+    
+    /*height: auto;
+    vertical-align: bottom;*/
     width: 100%;
-    height: 200px;
-    left: 0;
+
 }
-.actualite_container .actualite_card .actualite_image_box img{
-    max-width: 310px;
-}
-.actualite_container .actualite_card .actualite_content{
-    max-width: 278px;
-    margin: 10px;
-    position: relative;
-}
-.actualite_container .actualite_card a{
-    color: #cf0a2c;
+
+.actualite_card:last-child{
+    margin-right: 0px;
 }
 .button_jaune a{
     border: solid 2px #eaa903;
@@ -555,9 +685,11 @@ input{
  #iutEnChiffre {
     background-color: #eaa903;
     color: white;
-    padding: 50px 0 50px 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
     
 }
+
 #titreIutEnChiffre {
     text-align: center;
     padding: 20px 0 20px 0;
@@ -570,30 +702,50 @@ input{
     text-align: center;
     margin: auto;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     padding-top: 40px;
     padding-bottom: 20px;
+    width: 80%;
+    max-width: 1080px;
 }
+
 .BoxiutEnChiffre{
-    width: 220px;
-    height: 120px;
-    margin: 0px 10px;
     text-transform: uppercase;
+    margin-right: 5.5%;
+    width: 15.6%;
+    text-align: center;
 }
+
+.BoxiutEnChiffre:last-child {
+    margin-right: 0;
+}
+
 .nbr{
     font-weight: 700;
     color:  #ffffff;
     text-align: center;
     font-size: 60px;
-
+    margin-bottom: 0px;
+	
 }
+#titreIutEnChiffre p{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    line-height: 1.9em;
+    }
 
-.title{
-    font-weight: bold;
-    color:  #353740;
-    text-align: center;
+.partie h3{
+    color: #353740;
+    position: relative;
     font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+
 }
+
 /*Fin IUT en chiffre*/
 
 /*Footer*/
@@ -604,19 +756,19 @@ footer .container{
     display: block;
     width: 80%;
     max-width: 1080px;
-    padding: 0;
+    padding-top: 2.25%;
     text-align: left; 
 }
 
-footer .row{
-    margin: 0px;
-    padding-bottom: 20px;
+footer .row {
+    flex-wrap: nowrap !important;
 }
-footer .row-1{
+
+footer .row >div{
     margin: 0px;
-    padding-top: 6%;
-    
+    padding-bottom: 20px;  
 }
+
 footer p{
     display: inline-block;
     color:white;
@@ -653,11 +805,11 @@ footer{
 
 }
 
-footer .col {
+footer .information-iut {
     width: 29.667%;
     float: left;
-    margin-right: 5.5%; 
-    margin-bottom: 5.5%;
+    margin-right: 5.5%!important; 
+    margin-bottom: 5.5%!important;
     padding: 0;
     
 
@@ -669,19 +821,13 @@ footer #a{
 footer .image-res{
     margin-bottom: 5.5%;
 }
-@font-face {
-    font-family: "Open Sans";
-    src: local("Open Sans Regular"), local("OpenSans-Regular"), url("font/open-sans-v15-latin-ext_latin-regular.eot") format("embedded-opentype"), url("font/open-sans-v15-latin-ext_latin-regular.woff2") format("woff2"), url("font/open-sans-v15-latin-ext_latin-regular.woff") format("woff"), url("font/open-sans-v15-latin-ext_latin-regular.ttf") format("truetype"), url("font/open-sans-v15-latin-ext_latin-regular.svg") format("svg");
-    font-style: normal;
-    font-weight: 400;
+
+.affichage-logo{
+    font-family: "ETmodules";
+    font-size: 60px;
+    color: #ffffff;
   }
 
-@font-face {
-    font-family: "Open Sans";
-    src: local("Open Sans Bold"), local("OpenSans-Bold"), url("font/open-sans-v15-latin-ext_latin-700.eot") format("embedded-opentype"), url("font/open-sans-v15-latin-ext_latin-700.woff2") format("woff2"), url("font/open-sans-v15-latin-ext_latin-700.woff") format("woff"), url("font/open-sans-v15-latin-ext_latin-700.ttf") format("truetype"), url("fonts/open-sans-v15-latin-ext_latin-700.svg") format("svg");
-    font-style: normal;
-    font-weight: 700;
-}
 
 /*Fin Footer*/
 
@@ -689,7 +835,11 @@ footer .image-res{
 /*Page réduite*/
 @media only all and (max-width: 980px) {
     /*background-color: #f2f2f2; gris clair button hover*/
-    
+    .title {
+        color: #666!important;
+        font-family: "Open Sans", Arial, sans-serif!important;
+        font-size: 14px!important;
+    }
     article{
         background-color: #ffffff !important;
     }
@@ -726,27 +876,40 @@ footer .image-res{
     }
 
     /*Bannière CSS*/
+    .home_page{
+        padding: 50px 0;
+        margin:0;
+
+    }
+    #banniere{
+        background-color: white;
+        background-image: none;
+    }
     #banniere_text_contenue{
         display: block;
         box-sizing: border-box;
-        width: 100%;
-        background-color: white;
-        padding-left: 100px;
-        padding-right: 100px;
+        width: 80%;
+
+        padding:0;
+        margin:auto;
         color: black;
     }
     #banniere_text_contenue h1{
-        font-weight: bold;
+        font-weight: 800;
+        color: #555;
         font-size: 30px;
-        padding-bottom: 15px;
-        color: #333;
-        margin: 0%;
-        padding: 0 0 10px 0;
+        text-transform: none;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        
+        
     }
+
     #banniere_text_contenue p{
         font-size: 14px;
         margin: 0%;
         padding: 0%;
+        color: #666;
     }
     /*Fin Bannière CSS*/
 
@@ -756,10 +919,21 @@ footer .image-res{
         font-size: 20px;
         text-align: left;
         font-weight: bold;
+
     }
     /*Fin Candidature CSS*/
 
     /*Diplome CSS*/
+    .diplome{
+        width: 47.25%;
+        margin-right: 5.5%;
+        margin-bottom: 30px;
+        padding:0;
+    }
+    .diplome:nth-child(2n) {
+        margin-right: 0;
+    }
+
     #SectionDiplomes{
         margin: 0%;
         padding: 0%;
@@ -780,13 +954,106 @@ footer .image-res{
     /*Fin Diplome CSS*/
 
     /*Actualité CSS*/
+    .actualite_container{
+        flex-direction: column;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    .actualite_card{
+        width: 100%;
+        margin-bottom:60px;
+        margin-bottom: 30px;
+        padding: 19px;
+    }
 
     /*Fin Actualité CSS*/
 
     /*IUT en chiffre CSS*/
-    .BoxiutEnChiffre p{
-        color: #333;
+    
+    .BoxiutEnChiffre:last-child {
+        margin:0;
+        float: left;
     }
+    .BoxiutEnChiffre:nth-child(2n){
+        margin-right: 0;
+    }
+    .BoxiutEnChiffre p{
+        
+        
+        font-size: 72px;
+        font-weight: 500;
+        text-align: center;
+        font-family: "Open Sans", Arial, sans-serif;
+        color: #666;
+        
+    }
+
+    #titreIutEnChiffre {
+        text-align: center;
+        padding: 0px;
+        margin: 0 170px 0 170px;
+        font-weight: 500px;
+        font-size: 14px;
+        font-family: "Open Sans", Arial, sans-serif;
+        color: #666;
+    }
+
+    #Chiffre{
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start
+        }
+
+    .BoxiutEnChiffre{
+    position: center;
+    width: 47.25%;
+    }
+
+
+
+    .title h3{
+        font-weight: 700;
+        color: #555;
+        font-family: "Open Sans", Arial, sans-serif!important;
+        text-align: center;
+        text-transform: none;
+        font-size: 18px;
+
+    }
+
+
     /*Fin IUT en chiffre CSS*/
+
+    /*Footer*/
+    footer .row{
+        flex-wrap: wrap!important;
+        padding-top: 10%; 
+    }
+
+    footer .information-iut{
+        width:100%; 
+    }
+
+        
+    /*Fin Footer*/
+    
+} 
+
+@media all and (max-width:470px){
+    #Chiffre{
+        flex-direction: column;
+        align-content: center;
+    }
 }
+
 /*Fin Page réduite*/
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
