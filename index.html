@@ -8,9 +8,6 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Surface de la page-->
 
-			<!-- font -->
-			<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-
 			<!--Lien Boostrap-->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,16 +23,16 @@
 						<div id="menu-social">
 							<ul id="icone-reseau">
 								<li id="icone-facebook">
-									<a href="index.html" class="fa fa-facebook" target="_blank"></a>
+									<a href="https://fr-fr.facebook.com/iutparis/" class="fa fa-facebook" target="_blank"></a>
 								</li>
 								<li id="icone-twitter">
-									<a href="index.html" class="fa fa-twitter" target="_blank"></a>
+									<a href="https://twitter.com/iutparis" class="fa fa-twitter" target="_blank"></a>
 								</li>
 								<li id="lien-etu">
-									<a href="index.html" class="lien">Étudiants</a>
+									<a href="https://u-paris.fr/bienvenue/" class="lien">Étudiants</a>
 								</li>
 								<li id="lien-pers">
-									<a href="index.html" class="lien">Personnels</a>
+									<a href="https://ent.parisdescartes.fr" class="lien">Personnels</a>
 								</li>
 							</ul>
 						</div>
@@ -43,7 +40,7 @@
 				</div>
 				<div id="barre" class="container-fluid clearfix">
 					<div id="logo">
-						<a href="index.html"><img src="./images/logo_iut-paris-descartes.png"></a>
+						<a href="https://www.iut.parisdescartes.fr/"><img src="images/logo_iut-paris-descartes.png"></a>
 					</div>
 					<div id="menu">
 						<nav class="navbar navbar-expand-lg justify-content-center" id="ouvrir">
@@ -198,11 +195,11 @@
 			</header>
 
             <!--Banniere-->
-            <article id="home_page">
-                <div  id="home_page_contenue">
+            <article class="home_page partie">
+                <div id="home_page_contenue">
                     <div id="banniere" class="row apparaitre">
                         <div id="banniere_text_contenue">
-                            <div class="texte_banniere" id="banniere_contenue">
+                            <div id="banniere_contenue" class="banniere_text">
                                 <h1>Rentrée 2020</h1>
 
                                 <div id="banniere_text_1" class="banniere_text">
@@ -237,28 +234,30 @@
 
 
 			<!--Candidature-->
-			<article id="SectionCandidature">
-				<div id="titreCandidature" class="apparaitre">
-					<h1> Candidature 2020-2021 </h1>
-				</div>
-				<div id="phraseCalendrierCandidature" class="apparaitre">
-					<p> Les calendriers de candidature pour les DUT, Licences Professionnelles, Licences 3, Master, Passerelle DEASS et DU sont en ligne ! </p>
-				</div >
-				<div id="div_btn" class="apparaitre">
-					<div class="button button_jaune" class="apparaitre">
-						<a href="index.html"> Plus d'informations </a>
+			<article  id="SectionCandidature">
+				<div class="row-candidature">
+					<div id="titreCandidature" class="apparaitre">
+						<p class="title"> Candidatures 2020-2021 </p>
+					</div>
+					<div id="phraseCalendrierCandidature" class="apparaitre">
+						<h3> Les calendriers de candidature pour les DUT, Licences Professionnelles, Licences 3, Master, Passerelle DEASS et DU sont en ligne ! </h3>
+					</div >
+					<div id="div_btn" class="apparaitre">
+						<div class="button button_jaune" class="apparaitre">
+							<a href="index.html"> Plus d'informations </a>
+						</div>
 					</div>
 				</div>
 			</article>
  
 
 			<!--Diplôme-->
-			<article id="SectionDiplomes">
+			<article class="partie" id="SectionDiplomes">
 				<div id="Diplome_Content">
-
-					<h1 class="apparaitre"> Diplômes </h1>
-	
-					<div id="Diplomes" class="row apparaitre">
+					<div class="apparaitre">
+						<p class="title" id="title-diplomes"> Diplômes </p>
+					</div>
+					<div id="Diplomes" class="apparaitre"> 
 						<div class="diplome">
 							<a href="https://www.iut.parisdescartes.fr/accueil/les-dut/">
 								<span class="affichage-logo">&#xe058</span>
@@ -309,81 +308,78 @@
 
 
 			<!--Actualité-->
-			<article class="actualite">
-				<h1 class="apparaitre">Actualités</h1>
-				
-				<div class="actualite_box apparaitre">
+			<article class="partie actualite">
+				<div class="actualite_box">
+					<div class="titre-actualite">
+						<p class="title" id="title-act">Actualités</p>
+					</div>
 					<div class="actualite_container">
-						<div class="actualite_card RentreeBox">
-							<!--<div class="actualite_image_box" data-text="#">
-								<img src="#">
-							</div>-->
+						<div class="actualite_card">
 							<div class="actualite_content">
-								<div>
+								
 									<a href="index.html">
 									<div class="actualite_titre">
-										<h3>Rentree 2020 : inscription et date à retenir</h3>
+										<h2>Rentrée 2020 : inscriptions et date à retenir</h2>
 									</div>
 									</a>
-									<p>IUT</p>
+									<a href="https://www.iut.parisdescartes.fr/category/iut/">IUT</a>
 									<p>
 										Inscriptions administratives   Les inscriptions administratives à l'IUT de Paris 
 										auront lieu du 15 juillet au 24 juillet 2020 pour les DUT, Licences professionnelles 
 										et Licences 3 en formation initiale, et à compter du 24 août 2020 pour toutes les autres…
 									</p>
-									<a href="index.html">lire plus</a>
-								</div>
+									<a class="lien-iut" href="index.html">lire plus</a>
+								
 							</div>
 						</div>
-						<div class="actualite_card ReouvertureBox">
-							<a href="index.html">
-							<div class="actualite_image_box">
-								<img src="./images/fille-pouce-levé.jpg">
-							</div>
-							</a>
+						<div class="actualite_card">
+							
+								<div class="actualite_image_box">
+										<a  href="index.html">
+											<img src="./images/fille-pouce-levé.jpg">
+										</a>
+								</div>
+							
 							<div class="actualite_content">
 								<div>
-									<a href="index.html">
+									<a class="lien-iut" href="index.html">
 									<div class="actualite_titre">
-										<h3>Réouverture de la bibliothèque de l’IUT !</h3>
+										<h2>Réouverture de la bibliothèque de l’IUT !</h2>
 									</div>
 									</a>
-									<p>IUT</p>
+									<a href="https://www.iut.parisdescartes.fr/category/iut/">IUT</a>
 									<p>
 										La bibliothèque de l'IUT a rouvert ses portes au public le lundi 7 septembre 2020, aux horaires 
 										habituels de 9h à 19h du lundi au vendredi. Néanmoins, étant donné le contexte actuel, des mesures 
 										spécifiques ont été mises en place pour la réouverture : Fermeture…
 									</p>
-									<a href="index.html">lire plus</a>
+									<a class="lien-iut" href="index.html">lire plus</a>
 								</div>
 							</div>
 						</div>
-						<div class="actualite_card ExamensBox">
-							<!--<div class="actualite_image_box" data-text="#">
-								<img src="#">
-							</div>-->
+						<div class="actualite_card">
 							<div class="actualite_content">
 								<div>
-									<a href="index.html">
+									<a class="lien-iut" href="index.html">
 									<div class="actualite_titre">
-										<h3>Examens 2020 : les dates à retenir</h3>
+										<h2>Examens 2020 : les dates à retenir</h2>
 									</div>
 									</a>
-									<p>IUT</p>
+									<a href="https://www.iut.parisdescartes.fr/category/iut/">IUT</a>
 									<p>
 										Voici les dates d'examens à retenir pour l'année 2020 de la filière CCA : Ces dates 
 										sont connues par les étudiant.e.s depuis le 6 mai L3 CCA formation initiale Droit des 
 										sociétés, enseignant.e : CHAMBOREDON Date : 2 juin Horaire : 9h30 - 11h30 Contrôle long 
 										Droit du…
 									</p>
-									<a href="index.html">lire plus</a>
+									<a class="lien-iut" href="index.html">lire plus</a>
 								</div>
 							</div>
 						</div>					
 					</div>
 				</div>
 				<div id="div_btn">
-					<div class="button button_jaune apparaitre">
+					<div class="button button_jaune">
 						<a href="index.html">Toutes les actualités</a>
 					</div>
 				</div>
@@ -391,13 +387,13 @@
 			
 
 			<!--IUT en chiffre-->
-			<article id="iutEnChiffre">
-				<div id="titreIutEnChiffre" class="apparaitre"> 
-					<H1> L’IUT de Paris en chiffres </H1>
+			<article class="partie" id="iutEnChiffre">
+				<div id="titreIutEnChiffre"> 
+					<p class="title"> L’IUT de Paris en chiffres </p>
 				</div>
  
  
-				<div id="Chiffre" class="row apparaitre">
+				<div id="Chiffre" class="apparaitr">
 				
  					<div class="BoxiutEnChiffre">
 						<p class="nbr"> 3000 </p>
@@ -409,7 +405,7 @@
 						
 						<p class="nbr"> 1100</p>
 
-						<Hh class="title"> Apprentis et stagiaires de formation continue </Hh> 
+						<h3 class="title"> Apprentis et stagiaires de formation continue </h3> 
 
 					</div>
 	    			
@@ -442,10 +438,9 @@
 			<!--Partie Helene-->
 			<footer>	
 				<div class="container">
-					<div class="row-1">
-					</div>
+
 					<div class="row">
-						<div class="col">
+						<div class="information-iut">
 							<div class="footer-menu">
 								<h4>IUT de Paris</h4>
 		
@@ -465,7 +460,7 @@
 						</div>
 							
 					
-						<div class="col">
+						<div class="information-iut">
 							<div class="footer-menu">
 								<h4>Accès directs</h4>
 								<p>
@@ -475,7 +470,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-image">
+						<div class="univ-image">
 							<div class="image-res">
 								<a href="https://u-paris.fr/">
 									<img
