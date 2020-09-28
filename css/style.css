@@ -82,6 +82,11 @@ a{
     margin-top: 152px;
 }
 
+/*espacement entre le body-navbar*/
+.home_page {
+    margin-top: 152px;
+}
+
 /*Button et ses animations*/
 .button{
     margin-bottom: 20px;
@@ -630,22 +635,6 @@ input{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
-}
-@media only all and (max-width: 1011px) {
-    .actualite_container{
-        justify-content: space-between;
-    }
-    .ExamensBox{
-        position: relative;
-        top: -200px;
-    }
-}
-@media only all and (max-width: 691px) {
-    .actualite_container{
-        display: flex;
-        justify-content: space-around;
-    }
 }
 .actualite_card{
     width: 29.667%;
@@ -654,6 +643,7 @@ input{
     /* max-width: 100%; */
     border: solid 1px #d8d8d8;
     padding: 19px;
+
 }
 .actualite_image_box{
     margin: -20px -20px 29px; 
