@@ -137,7 +137,8 @@ header{
 	width: 100%;
 	position: fixed;
 	border-bottom: 1.5px #e7e7e7 solid;
-	z-index: 99999;
+    z-index: 99999;
+    right: 15px;
 }
 
 #top-menu{
@@ -412,7 +413,7 @@ input{
 		width: 200px;
 		position: absolute;
 		bottom: -10px;
-		right: 50px;
+		right: 15px;
 	}
 	#ouvrir:target #mobile{
 		display: none;
